@@ -1,0 +1,22 @@
+[
+	{
+		"label": "model.json",
+		"subgraphs": [
+			{
+				"id": "2",
+				"nodes": [
+					{
+						"id": "0",
+						"label": "Self-Contained",
+						"namespace": "PassthroughGenerator"
+					},
+					{
+						"id": "1",
+						"label": "Unknown Module",
+						"namespace": "om.class"
+					}
+				]
+			}
+		]
+	}
+]
