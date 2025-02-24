@@ -1,0 +1,32 @@
+[
+  {
+    "label": "model.json",
+    "subgraphs": [
+      {
+        "id": "4",
+        "nodes": [
+          {
+            "id": "0",
+            "label": "Self-Contained",
+            "namespace": "Mux2"
+          },
+          {
+            "id": "1",
+            "label": "Self-Contained",
+            "namespace": "Invert"
+          },
+          {
+            "id": "2",
+            "label": "Self-Contained",
+            "namespace": "Mux4"
+          },
+          {
+            "id": "3",
+            "label": "Unknown Module",
+            "namespace": "om.class"
+          }
+        ]
+      }
+    ]
+  }
+]

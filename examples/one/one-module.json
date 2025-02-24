@@ -1,0 +1,40 @@
+[
+	{
+		"label": "model.json",
+		"subgraphs": [
+			{
+				"id": "1",
+				"nodes": [
+					{
+						"attrs": [
+							{
+								"key": "fillcolor",
+								"value": "lightblue"
+							},
+							{
+								"key": "style",
+								"value": "filled"
+							}
+						],
+						"id": "PassthroughGenerator_0",
+						"incomingEdges": [],
+						"label": "hw.output",
+						"namespace": "PassthroughGenerator"
+					},
+					{
+						"attrs": [],
+						"id": "PassthroughGenerator_1",
+						"incomingEdges": [],
+						"label": "PassthroughGenerator",
+						"namespace": "PassthroughGenerator"
+					},
+					{
+						"id": "om.class_0",
+						"label": "Unknown Module",
+						"namespace": "om.class"
+					}
+				]
+			}
+		]
+	}
+]
