@@ -19,7 +19,6 @@
             # python312
             # (poetry.override { python3 = python312; })
             nodejs_22
-            yarn-berry
             cypress
             (python312.withPackages (p: with p;
               let
