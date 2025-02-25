@@ -1,9 +1,12 @@
 import { searchSelect, verifyInfoPanel } from "../utils/node";
-import { mod1, openModel } from "../utils/openModel";
+import { Model, openModel } from "../utils/openModel";
 
 describe("Explore a basic graph", () => {
+  beforeEach(() => {
+    openModel([Model.mod1]);
+  });
+
   it("Finds top level node", () => {
-    openModel([mod1]);
     searchSelect("PassthroughGenerator");
     verifyInfoPanel({
       layerInfo: {
@@ -14,7 +17,6 @@ describe("Explore a basic graph", () => {
   });
 
   it("Finds output node", () => {
-    openModel([mod1]);
     searchSelect("hw.output");
     verifyInfoPanel({
       nodeInfo: {

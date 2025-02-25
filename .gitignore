@@ -179,6 +179,7 @@ cython_debug/
 # Follows is https://github.com/github/gitignore/blob/main/Node.gitignore
 
 cypress/screenshots
+cypress/videos
 
 # Logs
 logs

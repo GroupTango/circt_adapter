@@ -1,6 +1,15 @@
 import { modelTextBox, viewModels } from "./selectors";
 
-export const openModel = (models: string[]) => {
+export enum Model {
+  mod1 = "examples/one/one-module.json",
+  mod2 = "examples/two/two-module.json",
+  ins2 = "examples/two/two-instance.json",
+  modB1 = "examples/boom/boom-module.json",
+  modB2 = "examples/boom-smaller/boom-smaller-module.json",
+  insB2 = "examples/boom-smaller/boom-smaller-instance.json",
+}
+
+export const openModel = (models: Model[]) => {
   const root = Cypress.config("projectRoot");
 
   cy.visit("http://localhost:8080");
@@ -11,10 +20,3 @@ export const openModel = (models: string[]) => {
 
   cy.get(viewModels).click();
 };
-
-export const mod1 = "examples/one/one-module.json";
-export const mod2 = "examples/two/two-module.json";
-export const ins2 = "examples/two/two-instance.json";
-export const modB1 = "examples/boom/boom-module.json";
-export const modB2 = "examples/boom-smaller/boom-smaller-module.json";
-export const insB2 = "examples/boom-smaller/boom-smaller-instance.json";
