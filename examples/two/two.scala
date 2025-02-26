@@ -25,12 +25,13 @@ class Mux4 extends Module {
     val in2 = Input(UInt(1.W))
     val in3 = Input(UInt(1.W))
     val sel = Input(UInt(2.W))
-    val out = Output(UInt(1.W))
+    val out1 = Output(UInt(1.W))
+    val out2 = Output(UInt(2.W))
   })
 
   val i1 = Module(new Invert())
   i1.io.in := io.sel
-  val sel1 := i1.io.out
+  val sel1 = i1.io.out
 
   val m0 = Module(new Mux2())
   m0.io.sel := sel1(0)
@@ -47,5 +48,6 @@ class Mux4 extends Module {
   m2.io.in0 := m0.io.out
   m2.io.in1 := m1.io.out
 
-  io.out := m2.io.out
+  io.out1 := m2.io.out
+  io.out2 := i1.io.out
 }

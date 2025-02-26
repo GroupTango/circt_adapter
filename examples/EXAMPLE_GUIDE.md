@@ -53,3 +53,12 @@ circt-opt --hw-print-module-graph foo/bar.mlir -o /dev/null 2>&1 | dot -Tpng -O
 ```
 
 ## Instance and Module JSONs
+
+We implement the `hw-print-module-json` and `hw-print-module-instance-json` passes.
+
+To run:
+
+```
+circt-opt --hw-print-module-json foo/bar.mlir -o /dev/null 2>'foo/bar-module.json'
+circt-opt --hw-print-module-instance-json foo/bar.mlir -o /dev/null 2>'foo/bar-instance.json'
+```

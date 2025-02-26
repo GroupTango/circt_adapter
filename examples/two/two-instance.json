@@ -3,27 +3,84 @@
     "label": "model.json",
     "subgraphs": [
       {
-        "id": "4",
+        "id": "7",
         "nodes": [
           {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
             "id": "0",
             "label": "Self-Contained",
             "namespace": "Mux2"
           },
           {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
             "id": "1",
             "label": "Self-Contained",
             "namespace": "Invert"
           },
           {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
             "id": "2",
-            "label": "Self-Contained",
+            "label": "Unknown Module",
+            "namespace": "om.class"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
+            "id": "3",
+            "label": "Invert",
             "namespace": "Mux4"
           },
           {
-            "id": "3",
-            "label": "Unknown Module",
-            "namespace": "om.class"
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
+            "id": "4",
+            "label": "Mux2",
+            "namespace": "Mux4"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
+            "id": "5",
+            "label": "Mux2",
+            "namespace": "Mux4"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
+            "id": "6",
+            "label": "Mux2",
+            "namespace": "Mux4"
           }
         ]
       }
