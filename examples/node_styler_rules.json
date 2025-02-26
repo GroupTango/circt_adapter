@@ -1,0 +1,71 @@
+ [
+  {
+    "queries": [
+      {
+        "type": "node_type",
+        "nodeType": "op_nodes"
+      },
+      {
+        "type": "regex",
+        "queryRegex": "hw.output",
+        "matchTypes": [
+          "title"
+        ]
+      }
+    ],
+    "nodeType": "op_nodes",
+    "styles": {
+      "node_bg_color": {
+        "id": "node_bg_color",
+        "value": "#ceefff"
+      }
+    },
+    "version": "v2"
+  },
+  {
+    "queries": [
+      {
+        "type": "node_type",
+        "nodeType": "op_nodes"
+      },
+      {
+        "type": "regex",
+        "queryRegex": "type:I/O",
+        "matchTypes": [
+          "list"
+        ]
+      }
+    ],
+    "nodeType": "op_nodes",
+    "styles": {
+      "node_bg_color": {
+        "id": "node_bg_color",
+        "value": "#ddffdb"
+      }
+    },
+    "version": "v2"
+  },
+  {
+    "queries": [
+      {
+        "type": "node_type",
+        "nodeType": "op_nodes"
+      },
+      {
+        "type": "regex",
+        "queryRegex": "type:instance",
+        "matchTypes": [
+          "list"
+        ]
+      }
+    ],
+    "nodeType": "op_nodes",
+    "styles": {
+      "node_bg_color": {
+        "id": "node_bg_color",
+        "value": "#fffcbe"
+      }
+    },
+    "version": "v2"
+  }
+]
