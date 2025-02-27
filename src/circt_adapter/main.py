@@ -40,18 +40,25 @@ def ConvertCirctToJson(mlir_str: str) -> str:
 
 
 def ConvertJsonToGraphs(json_str: str):
-  style_dict = {"hw":{"backgroundColor":"cyan"}, "I/O":{"backgroundColor":"yellow"}, "comb":{"backgroundColor":"red"}, "instance":{"backgroundColor":"lime"}, "seq":{"backgroundColor":"orange"}}  
+  style_dict = {}
+  resp = json.loads(json_str)
+
+  try:
+    with open('nodeColours.json', mode='rb') as style_file:
+       style_string = style_file.read()
+    style_dict = json.loads(style_string)
+  except FileNotFoundError:
+     return [GraphCollection(label=item['label'], graphs=item['subgraphs']) for item in resp]
+
   def hasNodeDialect(node):
     return (("attrs" in node) and (len(node["attrs"]) > 0) and (node["attrs"][-1]["value"]) in style_dict)
-  
-  resp = json.loads(json_str)
+
   for i in range(len(resp)):
     for j in range(len(resp[i]['subgraphs'])):
       for k in range(len(resp[i]['subgraphs'][j]["nodes"])):
         if hasNodeDialect(resp[i]['subgraphs'][j]["nodes"][k]):
           resp[i]['subgraphs'][j]["nodes"][k]["style"] = style_dict[resp[i]['subgraphs'][j]["nodes"][k]["attrs"][-1]["value"]]
-  graph_out = [GraphCollection(label=item['label'], graphs=item['subgraphs']) for item in resp]
-  return graph_out
+  return [GraphCollection(label=item['label'], graphs=item['subgraphs']) for item in resp]
   
 
 def CloneModule(src_node: graph_builder.GraphNode) -> graph_builder.GraphNode:
