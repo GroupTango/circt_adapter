@@ -6,7 +6,7 @@ from model_explorer.utils import convert_builtin_resp
 from model_explorer.types import GraphCollection, ModelExplorerGraphs
 
 
-class MyAdapter(Adapter):
+class CIRCTAdapter(Adapter):
 
   metadata = AdapterMetadata(
       id='circt_adapter',
@@ -40,8 +40,19 @@ def ConvertCirctToJson(mlir_str: str) -> str:
 
 
 def ConvertJsonToGraphs(json_str: str):
-  return convert_builtin_resp(json_str)
-
+  style_dict = {"hw":{"backgroundColor":"cyan"}, "I/O":{"backgroundColor":"yellow"}, "comb":{"backgroundColor":"red"}, "instance":{"backgroundColor":"lime"}, "seq":{"backgroundColor":"orange"}}  
+  def hasNodeDialect(node):
+    return (("attrs" in node) and (len(node["attrs"]) > 0) and (node["attrs"][-1]["value"]) in style_dict)
+  
+  resp = json.loads(json_str)
+  for i in range(len(resp)):
+    for j in range(len(resp[i]['subgraphs'])):
+        for k in range(len(resp[i]['subgraphs'][j]["nodes"])):
+            if hasNodeDialect(resp[i]['subgraphs'][j]["nodes"][k]):
+                resp[i]['subgraphs'][j]["nodes"][k]["style"] = style_dict[resp[i]['subgraphs'][j]["nodes"][k]["attrs"][-1]["value"]]
+  graph_out = [GraphCollection(label=item['label'], graphs=item['subgraphs']) for item in resp]
+  return graph_out
+  
 
 def CloneModule(src_node: graph_builder.GraphNode) -> graph_builder.GraphNode:
   return None
