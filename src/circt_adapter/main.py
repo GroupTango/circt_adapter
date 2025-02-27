@@ -47,9 +47,9 @@ def ConvertJsonToGraphs(json_str: str):
   resp = json.loads(json_str)
   for i in range(len(resp)):
     for j in range(len(resp[i]['subgraphs'])):
-        for k in range(len(resp[i]['subgraphs'][j]["nodes"])):
-            if hasNodeDialect(resp[i]['subgraphs'][j]["nodes"][k]):
-                resp[i]['subgraphs'][j]["nodes"][k]["style"] = style_dict[resp[i]['subgraphs'][j]["nodes"][k]["attrs"][-1]["value"]]
+      for k in range(len(resp[i]['subgraphs'][j]["nodes"])):
+        if hasNodeDialect(resp[i]['subgraphs'][j]["nodes"][k]):
+          resp[i]['subgraphs'][j]["nodes"][k]["style"] = style_dict[resp[i]['subgraphs'][j]["nodes"][k]["attrs"][-1]["value"]]
   graph_out = [GraphCollection(label=item['label'], graphs=item['subgraphs']) for item in resp]
   return graph_out
   
