@@ -6,7 +6,7 @@ from model_explorer.utils import convert_builtin_resp
 from model_explorer.types import GraphCollection, ModelExplorerGraphs
 
 
-class CIRCTAdapter(Adapter):
+class MyAdapter(Adapter):
 
   metadata = AdapterMetadata(
       id='circt_adapter',
