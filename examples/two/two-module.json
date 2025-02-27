@@ -14,7 +14,7 @@
                         ],
                         "id": "Mux4_clock",
                         "label": "clock",
-                        "namespace": "Mux4"
+                        "namespace": "Mux4/Inputs"
                     },
                     {
                         "attrs": [
@@ -25,7 +25,7 @@
                         ],
                         "id": "Mux4_reset",
                         "label": "reset",
-                        "namespace": "Mux4"
+                        "namespace": "Mux4/Inputs"
                     },
                     {
                         "attrs": [
@@ -36,7 +36,7 @@
                         ],
                         "id": "Mux4_io_in0",
                         "label": "io_in0",
-                        "namespace": "Mux4"
+                        "namespace": "Mux4/Inputs"
                     },
                     {
                         "attrs": [
@@ -47,7 +47,7 @@
                         ],
                         "id": "Mux4_io_in1",
                         "label": "io_in1",
-                        "namespace": "Mux4"
+                        "namespace": "Mux4/Inputs"
                     },
                     {
                         "attrs": [
@@ -58,7 +58,7 @@
                         ],
                         "id": "Mux4_io_in2",
                         "label": "io_in2",
-                        "namespace": "Mux4"
+                        "namespace": "Mux4/Inputs"
                     },
                     {
                         "attrs": [
@@ -69,7 +69,7 @@
                         ],
                         "id": "Mux4_io_in3",
                         "label": "io_in3",
-                        "namespace": "Mux4"
+                        "namespace": "Mux4/Inputs"
                     },
                     {
                         "attrs": [
@@ -80,7 +80,7 @@
                         ],
                         "id": "Mux4_io_sel",
                         "label": "io_sel",
-                        "namespace": "Mux4"
+                        "namespace": "Mux4/Inputs"
                     },
                     {
                         "attrs": [
@@ -91,7 +91,7 @@
                         ],
                         "id": "Invert_io_in",
                         "label": "io_in",
-                        "namespace": "Invert"
+                        "namespace": "Invert/Inputs"
                     },
                     {
                         "attrs": [
@@ -102,7 +102,7 @@
                         ],
                         "id": "Mux2_io_sel",
                         "label": "io_sel",
-                        "namespace": "Mux2"
+                        "namespace": "Mux2/Inputs"
                     },
                     {
                         "attrs": [
@@ -113,7 +113,7 @@
                         ],
                         "id": "Mux2_io_in0",
                         "label": "io_in0",
-                        "namespace": "Mux2"
+                        "namespace": "Mux2/Inputs"
                     },
                     {
                         "attrs": [
@@ -124,7 +124,7 @@
                         ],
                         "id": "Mux2_io_in1",
                         "label": "io_in1",
-                        "namespace": "Mux2"
+                        "namespace": "Mux2/Inputs"
                     },
                     {
                         "attrs": [
@@ -302,7 +302,7 @@
                             }
                         ],
                         "label": "io_out",
-                        "namespace": "Mux2"
+                        "namespace": "Mux2/Outputs"
                     },
                     {
                         "attrs": [
@@ -375,7 +375,7 @@
                             }
                         ],
                         "label": "io_out",
-                        "namespace": "Invert"
+                        "namespace": "Invert/Outputs"
                     },
                     {
                         "attrs": [
@@ -575,7 +575,7 @@
                             }
                         ],
                         "label": "io_out1",
-                        "namespace": "Mux4"
+                        "namespace": "Mux4/Outputs"
                     },
                     {
                         "attrs": [
@@ -593,7 +593,7 @@
                             }
                         ],
                         "label": "io_out2",
-                        "namespace": "Mux4"
+                        "namespace": "Mux4/Outputs"
                     },
                     {
                         "id": "om.class_0",
