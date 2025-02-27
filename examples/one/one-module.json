@@ -1,44 +1,62 @@
-Found HWModuleOp: PassthroughGenerator
-Found unknown module: om.class
-Adding top level Module for processing - Name: PassthroughGenerator Type: hw.module
-Operation PLEASE submit a bug report to https://github.com/llvm/circt and include the crash backtrace.
-Stack dump:
-0.	Program arguments: circt-opt --hw-print-module-json one/one.mlir -o /dev/null
- #0 0x0000629d9b3b5f80 llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/llvm/lib/Support/Unix/Signals.inc:796:22
- #1 0x0000629d9b3b63a1 PrintStackTraceSignalHandler(void*) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/llvm/lib/Support/Unix/Signals.inc:872:1
- #2 0x0000629d9b3b37f1 llvm::sys::RunSignalHandlers() /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/llvm/lib/Support/Signals.cpp:105:20
- #3 0x0000629d9b3b5818 SignalHandler(int) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/llvm/lib/Support/Unix/Signals.inc:413:1
- #4 0x000078ea87242520 (/lib/x86_64-linux-gnu/libc.so.6+0x42520)
- #5 0x0000629d9b3bda42 mlir::Operation::getName() /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/include/mlir/IR/Operation.h:119:36
- #6 0x0000629d9c7f8d8d (anonymous namespace)::OperationGraphGenerator::getOutputIncomingEdges(mlir::Value&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/lib/Dialect/HW/HWModelExplorer.cpp:372:49
- #7 0x0000629d9c7f9aa6 (anonymous namespace)::OperationGraphGenerator::processOutputs(mlir::Operation*, circt::hw::OutputOp, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/lib/Dialect/HW/HWModelExplorer.cpp:430:78
- #8 0x0000629d9c7f7e14 (anonymous namespace)::OperationGraphGenerator::processModule(mlir::Operation*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)::'lambda'(mlir::Operation&)::operator()(mlir::Operation&) const::'lambda0'(circt::hw::OutputOp&)::operator()(circt::hw::OutputOp&) const /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/lib/Dialect/HW/HWModelExplorer.cpp:325:19
- #9 0x0000629d9c7fb682 llvm::TypeSwitch<mlir::Operation*, void>& llvm::TypeSwitch<mlir::Operation*, void>::Case<circt::hw::OutputOp, (anonymous namespace)::OperationGraphGenerator::processModule(mlir::Operation*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)::'lambda'(mlir::Operation&)::operator()(mlir::Operation&) const::'lambda0'(circt::hw::OutputOp&)>((anonymous namespace)::OperationGraphGenerator::processModule(mlir::Operation*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)::'lambda'(mlir::Operation&)::operator()(mlir::Operation&) const::'lambda0'(circt::hw::OutputOp&)&&) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/llvm/include/llvm/ADT/TypeSwitch.h:150:18
-#10 0x0000629d9c7f8249 (anonymous namespace)::OperationGraphGenerator::processModule(mlir::Operation*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)::'lambda'(mlir::Operation&)::operator()(mlir::Operation&) const /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/lib/Dialect/HW/HWModelExplorer.cpp:323:41
-#11 0x0000629d9c7fb7e4 void (anonymous namespace)::forEachOperation<(anonymous namespace)::OperationGraphGenerator::processModule(mlir::Operation*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)::'lambda'(mlir::Operation&)>(mlir::Operation*, (anonymous namespace)::OperationGraphGenerator::processModule(mlir::Operation*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)::'lambda'(mlir::Operation&)) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/lib/Dialect/HW/HWModelExplorer.cpp:40:7
-#12 0x0000629d9c7f8586 (anonymous namespace)::OperationGraphGenerator::processModule(mlir::Operation*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/lib/Dialect/HW/HWModelExplorer.cpp:292:21
-#13 0x0000629d9c7f7497 (anonymous namespace)::OperationGraphGenerator::generateGraphJson() /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/lib/Dialect/HW/HWModelExplorer.cpp:218:5
-#14 0x0000629d9c7fa07e circt::hw::MlirToOperationGraphJson[abi:cxx11](mlir::Operation*, llvm::raw_ostream*) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/lib/Dialect/HW/HWModelExplorer.cpp:590:1
-#15 0x0000629d9c7f5167 (anonymous namespace)::PrintHWModuleJsonPass::runOnOperation() /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/lib/Dialect/HW/Transforms/PrintHWModuleJson.cpp:40:5
-#16 0x0000629d9f5793c3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int)::'lambda0'()::operator()() const /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Pass/Pass.cpp:523:57
-#17 0x0000629d9f57d06a void llvm::function_ref<void ()>::callback_fn<mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int)::'lambda0'()>(long) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/llvm/include/llvm/ADT/STLFunctionalExtras.h:47:40
-#18 0x0000629d9b2a54f8 llvm::function_ref<void ()>::operator()() const /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/llvm/include/llvm/ADT/STLFunctionalExtras.h:69:62
-#19 0x0000629d9f583357 void mlir::MLIRContext::executeAction<mlir::PassExecutionAction, mlir::Pass&>(llvm::function_ref<void ()>, llvm::ArrayRef<mlir::IRUnit>, mlir::Pass&) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/include/mlir/IR/MLIRContext.h:281:3
-#20 0x0000629d9f5797e7 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Pass/Pass.cpp:532:23
-#21 0x0000629d9f579ac8 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Pass/Pass.cpp:592:15
-#22 0x0000629d9f57b9d6 mlir::PassManager::runPasses(mlir::Operation*, mlir::AnalysisManager) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Pass/Pass.cpp:905:40
-#23 0x0000629d9f57b82e mlir::PassManager::run(mlir::Operation*) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Pass/Pass.cpp:885:69
-#24 0x0000629d9e67e941 performActions(llvm::raw_ostream&, std::shared_ptr<llvm::SourceMgr> const&, mlir::MLIRContext*, mlir::MlirOptMainConfig const&) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Tools/mlir-opt/MlirOptMain.cpp:474:13
-#25 0x0000629d9e67f07e processBuffer(llvm::raw_ostream&, std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, mlir::MlirOptMainConfig const&, mlir::DialectRegistry&, llvm::ThreadPoolInterface*) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Tools/mlir-opt/MlirOptMain.cpp:542:26
-#26 0x0000629d9e67f645 mlir::MlirOptMain(llvm::raw_ostream&, std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, mlir::DialectRegistry&, mlir::MlirOptMainConfig const&)::'lambda'(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::raw_ostream&)::operator()(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::raw_ostream&) const /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Tools/mlir-opt/MlirOptMain.cpp:625:25
-#27 0x0000629d9e6808c9 llvm::LogicalResult llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::raw_ostream&)>::callback_fn<mlir::MlirOptMain(llvm::raw_ostream&, std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, mlir::DialectRegistry&, mlir::MlirOptMainConfig const&)::'lambda'(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::raw_ostream&)>(long, std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::raw_ostream&) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/llvm/include/llvm/ADT/STLFunctionalExtras.h:46:52
-#28 0x0000629d9e6d88b3 llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::raw_ostream&)>::operator()(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::raw_ostream&) const /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/llvm/include/llvm/ADT/STLFunctionalExtras.h:69:12
-#29 0x0000629d9e6d8144 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Support/ToolUtilities.cpp:27:30
-#30 0x0000629d9e67f7de mlir::MlirOptMain(llvm::raw_ostream&, std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, mlir::DialectRegistry&, mlir::MlirOptMainConfig const&) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Tools/mlir-opt/MlirOptMain.cpp:628:31
-#31 0x0000629d9e67fad7 mlir::MlirOptMain(int, char**, llvm::StringRef, llvm::StringRef, mlir::DialectRegistry&) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Tools/mlir-opt/MlirOptMain.cpp:669:13
-#32 0x0000629d9e67fcce mlir::MlirOptMain(int, char**, llvm::StringRef, mlir::DialectRegistry&) /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/llvm/mlir/lib/Tools/mlir-opt/MlirOptMain.cpp:685:21
-#33 0x0000629d9b21012a main /home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/tools/circt-opt/circt-opt.cpp:82:0
-#34 0x000078ea87229d90 __libc_start_call_main ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
-#35 0x000078ea87229e40 call_init ./csu/../csu/libc-start.c:128:20
-#36 0x000078ea87229e40 __libc_start_main ./csu/../csu/libc-start.c:379:5
-#37 0x0000629d9b20fce5 _start (/home/david/Programming/Cambridge/IB/Group-Project/circt-adapter/circt/build/bin/circt-opt+0x445cce5)
+[
+    {
+        "label": "model.json",
+        "subgraphs": [
+            {
+                "id": "1",
+                "nodes": [
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "PassthroughGenerator_clock",
+                        "label": "clock",
+                        "namespace": "PassthroughGenerator/Inputs"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "PassthroughGenerator_reset",
+                        "label": "reset",
+                        "namespace": "PassthroughGenerator/Inputs"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "PassthroughGenerator_io_in",
+                        "label": "io_in",
+                        "namespace": "PassthroughGenerator/Inputs"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "PassthroughGenerator_io_out",
+                        "incomingEdges": [],
+                        "label": "io_out",
+                        "namespace": "PassthroughGenerator/Outputs"
+                    },
+                    {
+                        "id": "om.class_0",
+                        "label": "Unknown Module",
+                        "namespace": "om.class"
+                    }
+                ]
+            }
+        ]
+    }
+]
