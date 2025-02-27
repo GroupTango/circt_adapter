@@ -1,884 +1,607 @@
 [
-	{
-		"label": "model.json",
-		"subgraphs": [
-			{
-				"id": "1",
-				"nodes": [
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "darkgoldenrod1"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux2_4",
-						"incomingEdges": [],
-						"label": "1",
-						"namespace": "Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux2_5",
-						"incomingEdges": [],
-						"label": "&",
-						"namespace": "Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux2_6",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux2_4",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "^",
-						"namespace": "Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux2_7",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux2_6",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "&",
-						"namespace": "Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux2_8",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux2_7",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							},
-							{
-								"sourceNodeId": "Mux2_5",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "|",
-						"namespace": "Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "lightblue"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux2_9",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux2_8",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.output",
-						"namespace": "Mux2"
-					},
-					{
-						"attrs": [],
-						"id": "Mux2_10",
-						"incomingEdges": [],
-						"label": "Mux2",
-						"namespace": "Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "darkgoldenrod1"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Invert_0",
-						"incomingEdges": [],
-						"label": "3",
-						"namespace": "Invert"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Invert_1",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Invert_0",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "^",
-						"namespace": "Invert"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "lightblue"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Invert_2",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Invert_1",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.output",
-						"namespace": "Invert"
-					},
-					{
-						"attrs": [],
-						"id": "Invert_3",
-						"incomingEdges": [],
-						"label": "Invert",
-						"namespace": "Invert"
-					},
-					{
-						"attrs": [],
-						"id": "Mux4_11",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Invert_3",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.instance",
-						"namespace": "Mux4"
-					},
-					{
-						"attrs": [],
-						"id": "Mux4_12",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_10",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.instance",
-						"namespace": "Mux4"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4_13",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4_11",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "comb.extract",
-						"namespace": "Mux4"
-					},
-					{
-						"attrs": [],
-						"id": "Mux4_14",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_10",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.instance",
-						"namespace": "Mux4"
-					},
-					{
-						"attrs": [],
-						"id": "Mux4_15",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_10",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.instance",
-						"namespace": "Mux4"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4_16",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4_11",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "comb.extract",
-						"namespace": "Mux4"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "lightblue"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4_17",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4_15",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.output",
-						"namespace": "Mux4"
-					},
-					{
-						"attrs": [],
-						"id": "Mux4_18",
-						"incomingEdges": [],
-						"label": "Mux4",
-						"namespace": "Mux4"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "darkgoldenrod1"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_4",
-						"incomingEdges": [],
-						"label": "1",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_5",
-						"incomingEdges": [],
-						"label": "&",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_6",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_4",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "^",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_7",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_6",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "&",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_8",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_7",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							},
-							{
-								"sourceNodeId": "Mux4/Mux2_5",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "|",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "lightblue"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_9",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_8",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.output",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [],
-						"id": "Mux4/Mux2_10",
-						"incomingEdges": [],
-						"label": "Mux2",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "darkgoldenrod1"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_4",
-						"incomingEdges": [],
-						"label": "1",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_5",
-						"incomingEdges": [],
-						"label": "&",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_6",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_4",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "^",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_7",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_6",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "&",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_8",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_7",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							},
-							{
-								"sourceNodeId": "Mux4/Mux2_5",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "|",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "lightblue"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_9",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_8",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.output",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [],
-						"id": "Mux4/Mux2_10",
-						"incomingEdges": [],
-						"label": "Mux2",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "darkgoldenrod1"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_4",
-						"incomingEdges": [],
-						"label": "1",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_5",
-						"incomingEdges": [],
-						"label": "&",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_6",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_4",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "^",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_7",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_6",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "&",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_8",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_7",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							},
-							{
-								"sourceNodeId": "Mux4/Mux2_5",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "|",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "lightblue"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Mux2_9",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Mux2_8",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.output",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [],
-						"id": "Mux4/Mux2_10",
-						"incomingEdges": [],
-						"label": "Mux2",
-						"namespace": "Mux4/Mux2"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "darkgoldenrod1"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Invert_0",
-						"incomingEdges": [],
-						"label": "3",
-						"namespace": "Mux4/Invert"
-					},
-					{
-						"attrs": [
-							{
-								"key": "shape",
-								"value": "oval"
-							},
-							{
-								"key": "fillcolor",
-								"value": "bisque"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Invert_1",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Invert_0",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "^",
-						"namespace": "Mux4/Invert"
-					},
-					{
-						"attrs": [
-							{
-								"key": "fillcolor",
-								"value": "lightblue"
-							},
-							{
-								"key": "style",
-								"value": "filled"
-							}
-						],
-						"id": "Mux4/Invert_2",
-						"incomingEdges": [
-							{
-								"sourceNodeId": "Mux4/Invert_1",
-								"sourceNodeOutputId": "0",
-								"targetNodeInputId": "0"
-							}
-						],
-						"label": "hw.output",
-						"namespace": "Mux4/Invert"
-					},
-					{
-						"attrs": [],
-						"id": "Mux4/Invert_3",
-						"incomingEdges": [],
-						"label": "Invert",
-						"namespace": "Mux4/Invert"
-					},
-					{
-						"id": "om.class_0",
-						"label": "Unknown Module",
-						"namespace": "om.class"
-					}
-				]
-			}
-		]
-	}
+    {
+        "label": "model.json",
+        "subgraphs": [
+            {
+                "id": "1",
+                "nodes": [
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux4_clock",
+                        "label": "clock",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux4_reset",
+                        "label": "reset",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux4_io_in0",
+                        "label": "io_in0",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux4_io_in1",
+                        "label": "io_in1",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux4_io_in2",
+                        "label": "io_in2",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux4_io_in3",
+                        "label": "io_in3",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux4_io_sel",
+                        "label": "io_sel",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Invert_io_in",
+                        "label": "io_in",
+                        "namespace": "Invert"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux2_io_sel",
+                        "label": "io_sel",
+                        "namespace": "Mux2"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux2_io_in0",
+                        "label": "io_in0",
+                        "namespace": "Mux2"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux2_io_in1",
+                        "label": "io_in1",
+                        "namespace": "Mux2"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "fillcolor",
+                                "value": "darkgoldenrod1"
+                            },
+                            {
+                                "key": "style",
+                                "value": "filled"
+                            },
+                            {
+                                "key": "type",
+                                "value": "hw"
+                            }
+                        ],
+                        "id": "Mux2_4",
+                        "incomingEdges": [],
+                        "label": "1",
+                        "namespace": "Mux2"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "shape",
+                                "value": "oval"
+                            },
+                            {
+                                "key": "fillcolor",
+                                "value": "bisque"
+                            },
+                            {
+                                "key": "style",
+                                "value": "filled"
+                            },
+                            {
+                                "key": "type",
+                                "value": "comb"
+                            }
+                        ],
+                        "id": "Mux2_5",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux2_io_sel",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux2_io_in1",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "&",
+                        "namespace": "Mux2"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "shape",
+                                "value": "oval"
+                            },
+                            {
+                                "key": "fillcolor",
+                                "value": "bisque"
+                            },
+                            {
+                                "key": "style",
+                                "value": "filled"
+                            },
+                            {
+                                "key": "type",
+                                "value": "comb"
+                            }
+                        ],
+                        "id": "Mux2_6",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux2_4",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux2_io_sel",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "^",
+                        "namespace": "Mux2"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "shape",
+                                "value": "oval"
+                            },
+                            {
+                                "key": "fillcolor",
+                                "value": "bisque"
+                            },
+                            {
+                                "key": "style",
+                                "value": "filled"
+                            },
+                            {
+                                "key": "type",
+                                "value": "comb"
+                            }
+                        ],
+                        "id": "Mux2_7",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux2_6",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux2_io_in0",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "&",
+                        "namespace": "Mux2"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "shape",
+                                "value": "oval"
+                            },
+                            {
+                                "key": "fillcolor",
+                                "value": "bisque"
+                            },
+                            {
+                                "key": "style",
+                                "value": "filled"
+                            },
+                            {
+                                "key": "type",
+                                "value": "comb"
+                            }
+                        ],
+                        "id": "Mux2_8",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux2_7",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux2_5",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "|",
+                        "namespace": "Mux2"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux2_io_out",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux2_8",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "io_out",
+                        "namespace": "Mux2"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "fillcolor",
+                                "value": "darkgoldenrod1"
+                            },
+                            {
+                                "key": "style",
+                                "value": "filled"
+                            },
+                            {
+                                "key": "type",
+                                "value": "hw"
+                            }
+                        ],
+                        "id": "Invert_0",
+                        "incomingEdges": [],
+                        "label": "3",
+                        "namespace": "Invert"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "shape",
+                                "value": "oval"
+                            },
+                            {
+                                "key": "fillcolor",
+                                "value": "bisque"
+                            },
+                            {
+                                "key": "style",
+                                "value": "filled"
+                            },
+                            {
+                                "key": "type",
+                                "value": "comb"
+                            }
+                        ],
+                        "id": "Invert_1",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Invert_0",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Invert_io_in",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "^",
+                        "namespace": "Invert"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Invert_io_out",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Invert_1",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "io_out",
+                        "namespace": "Invert"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "instance"
+                            }
+                        ],
+                        "id": "Mux4_11",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux4_io_sel",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Invert",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "Invert",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "instance"
+                            }
+                        ],
+                        "id": "Mux4_12",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux4_13",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux4_io_in0",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux4_io_in1",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux2",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "Mux2",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "shape",
+                                "value": "oval"
+                            },
+                            {
+                                "key": "fillcolor",
+                                "value": "bisque"
+                            },
+                            {
+                                "key": "style",
+                                "value": "filled"
+                            },
+                            {
+                                "key": "type",
+                                "value": "comb"
+                            }
+                        ],
+                        "id": "Mux4_13",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux4_11",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "comb.extract",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "instance"
+                            }
+                        ],
+                        "id": "Mux4_14",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux4_13",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux4_io_in2",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux4_io_in3",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux2",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "Mux2",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "instance"
+                            }
+                        ],
+                        "id": "Mux4_15",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux4_16",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux4_14",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux4_12",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            },
+                            {
+                                "sourceNodeId": "Mux2",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "Mux2",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "shape",
+                                "value": "oval"
+                            },
+                            {
+                                "key": "fillcolor",
+                                "value": "bisque"
+                            },
+                            {
+                                "key": "style",
+                                "value": "filled"
+                            },
+                            {
+                                "key": "type",
+                                "value": "comb"
+                            }
+                        ],
+                        "id": "Mux4_16",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux4_11",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "comb.extract",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux4_io_out1",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux4_15",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "io_out1",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "attrs": [
+                            {
+                                "key": "type",
+                                "value": "I/O"
+                            }
+                        ],
+                        "id": "Mux4_io_out2",
+                        "incomingEdges": [
+                            {
+                                "sourceNodeId": "Mux4_11",
+                                "sourceNodeOutputId": "0",
+                                "targetNodeInputId": "0"
+                            }
+                        ],
+                        "label": "io_out2",
+                        "namespace": "Mux4"
+                    },
+                    {
+                        "id": "om.class_0",
+                        "label": "Unknown Module",
+                        "namespace": "om.class"
+                    }
+                ]
+            }
+        ]
+    }
 ]
