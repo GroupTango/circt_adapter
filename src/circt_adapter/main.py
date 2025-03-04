@@ -1,4 +1,5 @@
 # main.py
+import os
 import json
 from typing import Dict
 from model_explorer import *
@@ -6,7 +7,7 @@ from model_explorer.utils import convert_builtin_resp
 from model_explorer.types import GraphCollection, ModelExplorerGraphs
 
 
-class MyAdapter(Adapter):
+class CirctAdapter(Adapter):
 
   metadata = AdapterMetadata(
       id='circt_adapter',
@@ -40,24 +41,25 @@ def ConvertCirctToJson(mlir_str: str) -> str:
 
 
 def ConvertJsonToGraphs(json_str: str):
+  file_path = os.path.join(os.path.dirname(__file__) ,'nodeColours.json')
   style_dict = {}
   resp = json.loads(json_str)
 
   try:
-    with open('nodeColours.json', mode='rb') as style_file:
+    with open(file_path, mode='rb') as style_file:
        style_string = style_file.read()
     style_dict = json.loads(style_string)
   except FileNotFoundError:
      return [GraphCollection(label=item['label'], graphs=item['subgraphs']) for item in resp]
 
-  def hasNodeDialect(node):
-    return (("attrs" in node) and (len(node["attrs"]) > 0) and (node["attrs"][-1]["value"]) in style_dict)
+  for i, ni in enumerate(resp):
+    for j, nj in enumerate(ni['subgraphs']):
+      for k, nk in enumerate(nj["nodes"]):
+        if ("attrs" in nk):        
+            for l,nl in enumerate(nk["attrs"]):
+                if (nl["key"] == "type") and (nl["value"] in style_dict):
+                    nk["style"] = style_dict[nl["value"]]
 
-  for i in range(len(resp)):
-    for j in range(len(resp[i]['subgraphs'])):
-      for k in range(len(resp[i]['subgraphs'][j]["nodes"])):
-        if hasNodeDialect(resp[i]['subgraphs'][j]["nodes"][k]):
-          resp[i]['subgraphs'][j]["nodes"][k]["style"] = style_dict[resp[i]['subgraphs'][j]["nodes"][k]["attrs"][-1]["value"]]
   return [GraphCollection(label=item['label'], graphs=item['subgraphs']) for item in resp]
   
 
