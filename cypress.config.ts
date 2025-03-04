@@ -8,4 +8,8 @@ export default defineConfig({
   },
   video: true,
   videoCompression: true,
+  // temp: remove when done testing
+  env: {
+    filepaths: ['examples/boom-smaller/boom-smaller-module.json']
+  }
 });
