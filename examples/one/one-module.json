@@ -1,62 +1,62 @@
 [
-    {
-        "label": "model.json",
-        "subgraphs": [
-            {
-                "id": "1",
-                "nodes": [
-                    {
-                        "attrs": [
-                            {
-                                "key": "type",
-                                "value": "I/O"
-                            }
-                        ],
-                        "id": "PassthroughGenerator_clock",
-                        "label": "clock",
-                        "namespace": "PassthroughGenerator/Inputs"
-                    },
-                    {
-                        "attrs": [
-                            {
-                                "key": "type",
-                                "value": "I/O"
-                            }
-                        ],
-                        "id": "PassthroughGenerator_reset",
-                        "label": "reset",
-                        "namespace": "PassthroughGenerator/Inputs"
-                    },
-                    {
-                        "attrs": [
-                            {
-                                "key": "type",
-                                "value": "I/O"
-                            }
-                        ],
-                        "id": "PassthroughGenerator_io_in",
-                        "label": "io_in",
-                        "namespace": "PassthroughGenerator/Inputs"
-                    },
-                    {
-                        "attrs": [
-                            {
-                                "key": "type",
-                                "value": "I/O"
-                            }
-                        ],
-                        "id": "PassthroughGenerator_io_out",
-                        "incomingEdges": [],
-                        "label": "io_out",
-                        "namespace": "PassthroughGenerator/Outputs"
-                    },
-                    {
-                        "id": "om.class_0",
-                        "label": "Unknown Module",
-                        "namespace": "om.class"
-                    }
-                ]
-            }
+  {
+    "label": "model.json",
+    "subgraphs": [
+      {
+        "id": "1",
+        "nodes": [
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "PassthroughGenerator_clock",
+            "label": "clock",
+            "namespace": "PassthroughGenerator/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "PassthroughGenerator_reset",
+            "label": "reset",
+            "namespace": "PassthroughGenerator/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "PassthroughGenerator_io_in",
+            "label": "io_in",
+            "namespace": "PassthroughGenerator/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "PassthroughGenerator_io_out",
+            "incomingEdges": [],
+            "label": "io_out",
+            "namespace": "PassthroughGenerator/Outputs"
+          },
+          {
+            "id": "om.class_0",
+            "label": "Unknown Module",
+            "namespace": "om.class"
+          }
         ]
-    }
+      }
+    ]
+  }
 ]

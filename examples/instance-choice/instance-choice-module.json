@@ -1,0 +1,271 @@
+[
+  {
+    "label": "model.json",
+    "subgraphs": [
+      {
+        "id": "0",
+        "nodes": [
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "TargetB_a",
+            "label": "a",
+            "namespace": "TargetB/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "TargetA_a",
+            "label": "a",
+            "namespace": "TargetA/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "TargetDefault_a",
+            "label": "a",
+            "namespace": "TargetDefault/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "top_clk",
+            "label": "clk",
+            "namespace": "top/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "top_rst",
+            "label": "rst",
+            "namespace": "top/Inputs"
+          },
+          {
+            "attrs": [],
+            "id": "top_10",
+            "incomingEdges": [],
+            "label": "sv.reg",
+            "namespace": "top"
+          },
+          {
+            "attrs": [],
+            "id": "top_11",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "top_10",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "sv.read_inout",
+            "namespace": "top"
+          },
+          {
+            "attrs": [],
+            "id": "top_12",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "top_11",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "hw.instance_choice",
+            "namespace": "top"
+          },
+          {
+            "attrs": [],
+            "id": "top_22",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "top_clk",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "sv.alwaysff",
+            "namespace": "top"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "TargetDefault_b",
+            "incomingEdges": [],
+            "label": "b",
+            "namespace": "TargetDefault/Outputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "TargetA_0",
+            "incomingEdges": [],
+            "label": "5",
+            "namespace": "TargetA"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "TargetA_b",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "TargetA_1",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "b",
+            "namespace": "TargetA/Outputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "TargetB_4",
+            "incomingEdges": [],
+            "label": "15",
+            "namespace": "TargetB"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "TargetB_b",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "TargetB_5",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "b",
+            "namespace": "TargetB/Outputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "TargetA/CombGroup_1_1",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "TargetA/CombGroup_1_1",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "TargetA_0",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "+",
+            "namespace": "TargetA/CombGroup_1"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "TargetB/CombGroup_5_5",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "TargetB/CombGroup_5_5",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "TargetB_4",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "+",
+            "namespace": "TargetB/CombGroup_5"
+          }
+        ]
+      }
+    ]
+  }
+]

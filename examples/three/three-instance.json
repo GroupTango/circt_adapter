@@ -1,72 +1,72 @@
 [
-    {
-        "label": "model.json",
-        "subgraphs": [
-            {
-                "id": "5",
-                "nodes": [
-                    {
-                        "attrs": [
-                            {
-                                "key": "type",
-                                "value": "Top Level"
-                            }
-                        ],
-                        "id": "0",
-                        "label": "KnightRider",
-                        "namespace": "KnightTop"
-                    },
-                    {
-                        "attrs": [
-                            {
-                                "key": "type",
-                                "value": "Lower Level"
-                            }
-                        ],
-                        "id": "1",
-                        "incomingEdges": [
-                            {
-                                "sourceNodeId": "0"
-                            }
-                        ],
-                        "label": "Tick",
-                        "namespace": "KnightTop"
-                    },
-                    {
-                        "attrs": [
-                            {
-                                "key": "type",
-                                "value": "Top Level"
-                            }
-                        ],
-                        "id": "2",
-                        "label": "Self-Contained",
-                        "namespace": "Tick"
-                    },
-                    {
-                        "attrs": [
-                            {
-                                "key": "type",
-                                "value": "Top Level"
-                            }
-                        ],
-                        "id": "3",
-                        "label": "Tick",
-                        "namespace": "KnightRider"
-                    },
-                    {
-                        "attrs": [
-                            {
-                                "key": "type",
-                                "value": "Top Level"
-                            }
-                        ],
-                        "id": "4",
-                        "label": "Unknown Module",
-                        "namespace": "om.class"
-                    }
-                ]
-            }
+  {
+    "label": "model.json",
+    "subgraphs": [
+      {
+        "id": "5",
+        "nodes": [
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
+            "id": "0",
+            "label": "KnightRider",
+            "namespace": "KnightTop"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Lower Level"
+              }
+            ],
+            "id": "1",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "0"
+              }
+            ],
+            "label": "Tick",
+            "namespace": "KnightTop"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
+            "id": "2",
+            "label": "Self-Contained",
+            "namespace": "Tick"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
+            "id": "3",
+            "label": "Tick",
+            "namespace": "KnightRider"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
+            "id": "4",
+            "label": "Unknown Module",
+            "namespace": "om.class"
+          }
         ]
-    }
+      }
+    ]
+  }
 ]
