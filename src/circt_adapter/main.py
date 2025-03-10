@@ -6,6 +6,7 @@ from typing import Dict
 from model_explorer import *
 from model_explorer.types import GraphCollection, ModelExplorerGraphs
 
+
 class CirctAdapter(Adapter):
 
   metadata = AdapterMetadata(
@@ -23,10 +24,10 @@ class CirctAdapter(Adapter):
     super().__init__()
 
   def convert(self, model_path: str, settings: Dict) -> ModelExplorerGraphs:
-    src_string = ''    
+    src_string = ''
     if model_path.endswith('.mlir'):
-      src_string = ConvertCirctToJson(model_path)    
-    elif model_path.endswith('.json'): 
+      src_string = ConvertCirctToJson(model_path)
+    elif model_path.endswith('.json'):
       with open(model_path, mode='rb') as src_file:
         src_string = src_file.read()
 
@@ -34,9 +35,12 @@ class CirctAdapter(Adapter):
 
 
 def ConvertCirctToJson(model_path: str) -> str:
-  circt_path = os.environ.get('CIRCT_PATH','circt-opt')
-  result = subprocess.run([circt_path, '--hw-print-module-json',model_path,'-o', '/dev/null'], stderr=subprocess.PIPE).stderr.decode('utf-8')
-  result = result[result.find("JSON:")+5:]
+  circt_path = os.environ.get('CIRCT_PATH', 'circt-opt')
+  result = subprocess.run(
+      [circt_path, '--hw-print-module-json', model_path, '-o', '/dev/null'],
+      stderr=subprocess.PIPE,
+  ).stderr.decode('utf-8')
+  result = result[result.find('JSON:') + 5 :]
   return result
 
 
