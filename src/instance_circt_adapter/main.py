@@ -6,6 +6,7 @@ from typing import Dict
 from model_explorer import *
 from model_explorer.types import GraphCollection, ModelExplorerGraphs
 
+
 class InstanceCirctAdapter(Adapter):
 
   metadata = AdapterMetadata(
@@ -35,10 +36,17 @@ class InstanceCirctAdapter(Adapter):
 
 def ConvertCirctToJson(model_path: str) -> str:
   circt_path = os.environ.get('CIRCT_PATH', 'circt-opt')
-  result = subprocess.run([circt_path, '--hw-print-instance-json', model_path,"--outfile","out.json"])
-  with open("out.json", mode='rb') as src_file:
-     result = src_file.read()
+  result = subprocess.run([
+      circt_path,
+      '--hw-print-instance-json',
+      model_path,
+      '--outfile',
+      'out.json',
+  ])
+  with open('out.json', mode='rb') as src_file:
+    result = src_file.read()
   return result
+
 
 def ConvertJsonToGraphs(json_str: str):
   file_path = os.path.join(os.path.dirname(__file__), 'nodeColours.json')
