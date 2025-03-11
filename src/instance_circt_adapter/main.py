@@ -6,12 +6,11 @@ from typing import Dict
 from model_explorer import *
 from model_explorer.types import GraphCollection, ModelExplorerGraphs
 
-
-class ModuleCirctAdapter(Adapter):
+class InstanceCirctAdapter(Adapter):
 
   metadata = AdapterMetadata(
-      id='circt_adapter',
-      name='CIRCT Adapter',
+      id='instance_circt_adapter',
+      name='Instance CIRCT Adapter',
       description=(
           'Model Explorer Adapter for CIRCT generated JSON and MLIR files.'
       ),
@@ -36,11 +35,10 @@ class ModuleCirctAdapter(Adapter):
 
 def ConvertCirctToJson(model_path: str) -> str:
   circt_path = os.environ.get('CIRCT_PATH', 'circt-opt')
-  result = subprocess.run([circt_path, '--hw-print-module-json', model_path,"--outfile","out.json"])
+  result = subprocess.run([circt_path, '--hw-print-instance-json', model_path,"--outfile","out.json"])
   with open("out.json", mode='rb') as src_file:
      result = src_file.read()
   return result
-
 
 def ConvertJsonToGraphs(json_str: str):
   file_path = os.path.join(os.path.dirname(__file__), 'nodeColours.json')
@@ -69,7 +67,3 @@ def ConvertJsonToGraphs(json_str: str):
       GraphCollection(label=item['label'], graphs=item['subgraphs'])
       for item in resp
   ]
-
-
-def CloneModule(src_node: graph_builder.GraphNode) -> graph_builder.GraphNode:
-  return None
