@@ -24,8 +24,8 @@
               }
             ],
             "id": "1",
-            "label": "Self-Contained",
-            "namespace": "Invert"
+            "label": "Unknown Module",
+            "namespace": "Mux4_Class"
           },
           {
             "attrs": [
@@ -35,8 +35,8 @@
               }
             ],
             "id": "2",
-            "label": "Unknown Module",
-            "namespace": "om.class"
+            "label": "Self-Contained",
+            "namespace": "Invert"
           },
           {
             "attrs": [

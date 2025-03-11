@@ -12,40 +12,8 @@
                 "value": "I/O"
               }
             ],
-            "id": "TargetB_a",
-            "label": "a",
-            "namespace": "TargetB/Inputs"
-          },
-          {
-            "attrs": [
-              {
-                "key": "type",
-                "value": "I/O"
-              }
-            ],
-            "id": "TargetA_a",
-            "label": "a",
-            "namespace": "TargetA/Inputs"
-          },
-          {
-            "attrs": [
-              {
-                "key": "type",
-                "value": "I/O"
-              }
-            ],
-            "id": "TargetDefault_a",
-            "label": "a",
-            "namespace": "TargetDefault/Inputs"
-          },
-          {
-            "attrs": [
-              {
-                "key": "type",
-                "value": "I/O"
-              }
-            ],
             "id": "top_clk",
+            "incomingEdges": [],
             "label": "clk",
             "namespace": "top/Inputs"
           },
@@ -57,6 +25,7 @@
               }
             ],
             "id": "top_rst",
+            "incomingEdges": [],
             "label": "rst",
             "namespace": "top/Inputs"
           },
@@ -96,15 +65,21 @@
           {
             "attrs": [],
             "id": "top_22",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "top_clk",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              }
-            ],
+            "incomingEdges": [],
             "label": "sv.alwaysff",
             "namespace": "top"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "TargetDefault_a",
+            "incomingEdges": [],
+            "label": "a",
+            "namespace": "TargetDefault/Inputs"
           },
           {
             "attrs": [
@@ -117,6 +92,36 @@
             "incomingEdges": [],
             "label": "b",
             "namespace": "TargetDefault/Outputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "TargetA_a",
+            "incomingEdges": [],
+            "label": "a",
+            "namespace": "TargetA/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "TargetA_b",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "TargetA/CombGroup_1_1",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "b",
+            "namespace": "TargetA/Outputs"
           },
           {
             "attrs": [
@@ -145,16 +150,28 @@
                 "value": "I/O"
               }
             ],
-            "id": "TargetA_b",
+            "id": "TargetB_a",
+            "incomingEdges": [],
+            "label": "a",
+            "namespace": "TargetB/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "TargetB_b",
             "incomingEdges": [
               {
-                "sourceNodeId": "TargetA_1",
-                "sourceNodeOutputId": "0",
+                "sourceNodeId": "TargetB/CombGroup_5_5",
+                "sourceNodeOutputId": "1",
                 "targetNodeInputId": "0"
               }
             ],
             "label": "b",
-            "namespace": "TargetA/Outputs"
+            "namespace": "TargetB/Outputs"
           },
           {
             "attrs": [
@@ -175,24 +192,6 @@
             "incomingEdges": [],
             "label": "15",
             "namespace": "TargetB"
-          },
-          {
-            "attrs": [
-              {
-                "key": "type",
-                "value": "I/O"
-              }
-            ],
-            "id": "TargetB_b",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "TargetB_5",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              }
-            ],
-            "label": "b",
-            "namespace": "TargetB/Outputs"
           },
           {
             "attrs": [
