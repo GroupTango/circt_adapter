@@ -1,0 +1,23 @@
+{
+  "hw": {
+    "backgroundColor": "cyan"
+  },
+  "I/O": {
+    "backgroundColor": "yellow"
+  },
+  "comb": {
+    "backgroundColor": "#fc6061"
+  },
+  "instance": {
+    "backgroundColor": "orange"
+  },
+  "seq": {
+    "backgroundColor": "lime"
+  },
+  "Top Level": {
+    "backgroundColor": "white"
+  },
+  "Lower Level": {
+    "backgroundColor": "grey"
+  }
+}
