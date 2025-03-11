@@ -1,12 +1,13 @@
 import {
-  Attrs,
+  label,
+  attrs,
   canvas,
   closeSearchResults,
   infoPanel,
   infoPanelSegements,
   InfoPanelSegment,
-  Inputs,
-  Outputs,
+  inputs,
+  outputs,
   searchInput,
   searchInputUsed,
   searchResults,
@@ -14,14 +15,14 @@ import {
 
 export const search = (search: string, select = search) => {
   cy.get(searchInput).type(search);
-  cy.get(Attrs).click();
-  cy.get(Inputs).click();
-  cy.get(Outputs).click();
+  cy.get(label).click();
+  cy.get(inputs).click();
+  cy.get(outputs).click();
   cy.get(searchResults).contains(select).click();
 };
 
 export const searchSelect = (s: string, select = s) => {
-  search(s, select);
+  search(`id=${s}`, select);
   cy.get(closeSearchResults).click();
   cy.wait(200);
   cy.get(canvas).click();
@@ -29,7 +30,7 @@ export const searchSelect = (s: string, select = s) => {
 
 // ".ng-untouched" selector used in search doesn't work on subsequent searches
 export const searchNext = (s: string, select = s) => {
-  cy.get(searchInputUsed).eq(1).type(s);
+  cy.get(searchInputUsed).eq(1).type(`id=${s}`);
   cy.get(searchResults).contains(select).click(); // TBA: change to exact match
   cy.get(closeSearchResults).click();
   cy.wait(200);

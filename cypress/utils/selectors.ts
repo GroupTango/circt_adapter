@@ -6,9 +6,10 @@ export const viewModels = ".btn-view-models";
 export const searchResults = ".edge-node > .label-and-metadata > .label-container > .label";
 export const canvas = "webgl-renderer > .container > .main";
 export const infoPanel = "info-panel";
-export const Attrs = ".options-container > :nth-child(2)";
-export const Inputs = ".options-container > :nth-child(3)";
-export const Outputs = ".options-container > :nth-child(4)";
+export const label = ".options-container > :nth-child(1)";
+export const attrs = ".options-container > :nth-child(2)";
+export const inputs = ".options-container > :nth-child(3)";
+export const outputs = ".options-container > :nth-child(4)";
 export const infoPanelSegements = {
   nodeInfo: "Node info",
   layerInfo: "Layer info",

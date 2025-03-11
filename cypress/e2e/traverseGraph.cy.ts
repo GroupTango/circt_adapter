@@ -31,15 +31,16 @@ describe("Check membership of all (unique) graph nodes", () => {
             //cy.log(currentNode);
             describe(`Correctly loads node ${currentNode.id} of json file ${filepath}`, () => {
               let label = currentNode.label;
+              let id = currentNode.id;
 
               if (seen.has(label)) { } else {
                 seen.add(label);
                 label = label.replace(/[-[\]{}()*+?.,\\^$|]/g, "\\$&") // escape all special characters, because the modelexp search takes regex
   
                 if (i == 0) {
-                  searchSelect(label, currentNode.label);
+                  searchSelect(id, currentNode.label);
                 } else {
-                  searchNext(label, currentNode.label);
+                  searchNext(id, currentNode.label);
                 }
     
                 // input checking
