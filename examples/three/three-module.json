@@ -3,51 +3,12 @@
     "label": "model.json",
     "subgraphs": [
       {
-        "id": "1",
+        "id": "2",
         "nodes": [
           {
-            "attrs": [
-              {
-                "key": "type",
-                "value": "I/O"
-              }
-            ],
-            "id": "KnightRider_clock",
-            "label": "clock",
-            "namespace": "KnightRider/Inputs"
-          },
-          {
-            "attrs": [
-              {
-                "key": "type",
-                "value": "I/O"
-              }
-            ],
-            "id": "KnightRider_reset",
-            "label": "reset",
-            "namespace": "KnightRider/Inputs"
-          },
-          {
-            "attrs": [
-              {
-                "key": "type",
-                "value": "I/O"
-              }
-            ],
-            "id": "Tick_clock",
-            "label": "clock",
-            "namespace": "Tick/Inputs"
-          },
-          {
-            "attrs": [
-              {
-                "key": "type",
-                "value": "I/O"
-              }
-            ],
-            "id": "Tick_reset",
-            "label": "reset",
-            "namespace": "Tick/Inputs"
+            "id": "KnightTop_Class_0",
+            "label": "Unknown Module",
+            "namespace": "KnightTop_Class"
           },
           {
             "attrs": [
@@ -86,29 +47,24 @@
             "attrs": [
               {
                 "key": "type",
-                "value": "instance"
+                "value": "I/O"
               }
             ],
-            "id": "KnightTop_29",
+            "id": "KnightTop_io_led",
             "incomingEdges": [
               {
-                "sourceNodeId": "KnightTop_clock",
-                "sourceNodeOutputId": "0",
+                "sourceNodeId": "KnightTop_29",
+                "sourceNodeOutputId": "1",
                 "targetNodeInputId": "0"
               },
               {
-                "sourceNodeId": "KnightTop_reset",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "KnightRider",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
+                "sourceNodeId": "KnightTop/KnightRider_knight_io_led",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "1"
               }
             ],
-            "label": "KnightRider",
-            "namespace": "KnightTop"
+            "label": "io_led",
+            "namespace": "KnightTop/Outputs"
           },
           {
             "attrs": [
@@ -117,16 +73,401 @@
                 "value": "I/O"
               }
             ],
-            "id": "KnightTop_io_led",
+            "id": "KnightTop/KnightRider_knight_clock",
             "incomingEdges": [
               {
-                "sourceNodeId": "KnightTop_29",
-                "sourceNodeOutputId": "0",
+                "sourceNodeId": "KnightTop_clock",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "clock",
+            "namespace": "KnightTop/KnightRider_knight/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight_reset",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop_reset",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "reset",
+            "namespace": "KnightTop/KnightRider_knight/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight_io_led",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_13",
+                "sourceNodeOutputId": "1",
                 "targetNodeInputId": "0"
               }
             ],
             "label": "io_led",
-            "namespace": "KnightTop/Outputs"
+            "namespace": "KnightTop/KnightRider_knight/Outputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight_9",
+            "incomingEdges": [],
+            "label": "1",
+            "namespace": "KnightTop/KnightRider_knight"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight_10",
+            "incomingEdges": [],
+            "label": "0",
+            "namespace": "KnightTop/KnightRider_knight"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight_11",
+            "incomingEdges": [],
+            "label": "1",
+            "namespace": "KnightTop/KnightRider_knight"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "folder"
+              },
+              {
+                "key": "fillcolor",
+                "value": "gainsboro"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "seq"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight_12",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_20",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_10",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_clock",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_reset",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "stateReg",
+            "namespace": "KnightTop/KnightRider_knight"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "folder"
+              },
+              {
+                "key": "fillcolor",
+                "value": "gainsboro"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "seq"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight_13",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_26",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_11",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_clock",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_reset",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "ledReg",
+            "namespace": "KnightTop/KnightRider_knight"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/Tick_tick_clock",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_clock",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "clock",
+            "namespace": "KnightTop/KnightRider_knight/Tick_tick/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/Tick_tick_reset",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_reset",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "reset",
+            "namespace": "KnightTop/KnightRider_knight/Tick_tick/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/Tick_tick_io_tick",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "io_tick",
+            "namespace": "KnightTop/KnightRider_knight/Tick_tick/Outputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/Tick_tick_0",
+            "incomingEdges": [],
+            "label": "1",
+            "namespace": "KnightTop/KnightRider_knight/Tick_tick"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/Tick_tick_1",
+            "incomingEdges": [],
+            "label": "8333332",
+            "namespace": "KnightTop/KnightRider_knight/Tick_tick"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/Tick_tick_2",
+            "incomingEdges": [],
+            "label": "0",
+            "namespace": "KnightTop/KnightRider_knight/Tick_tick"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "folder"
+              },
+              {
+                "key": "fillcolor",
+                "value": "gainsboro"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "seq"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/Tick_tick_3",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick/CombGroup_4_6",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick_2",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick_clock",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick_reset",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "r1",
+            "namespace": "KnightTop/KnightRider_knight/Tick_tick"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "Tick_clock",
+            "label": "clock",
+            "namespace": "Tick/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "Tick_reset",
+            "label": "reset",
+            "namespace": "Tick/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "Tick_io_tick",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "io_tick",
+            "namespace": "Tick/Outputs"
           },
           {
             "attrs": [
@@ -222,12 +563,12 @@
               {
                 "sourceNodeId": "Tick_clock",
                 "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
+                "targetNodeInputId": "1"
               },
               {
                 "sourceNodeId": "Tick_reset",
                 "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
+                "targetNodeInputId": "1"
               }
             ],
             "label": "r1",
@@ -240,16 +581,38 @@
                 "value": "I/O"
               }
             ],
-            "id": "Tick_io_tick",
+            "id": "KnightRider_clock",
+            "label": "clock",
+            "namespace": "KnightRider/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "KnightRider_reset",
+            "label": "reset",
+            "namespace": "KnightRider/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "KnightRider_io_led",
             "incomingEdges": [
               {
-                "sourceNodeId": "Tick_4",
-                "sourceNodeOutputId": "0",
+                "sourceNodeId": "KnightRider_13",
+                "sourceNodeOutputId": "1",
                 "targetNodeInputId": "0"
               }
             ],
-            "label": "io_tick",
-            "namespace": "Tick/Outputs"
+            "label": "io_led",
+            "namespace": "KnightRider/Outputs"
           },
           {
             "attrs": [
@@ -345,12 +708,12 @@
               {
                 "sourceNodeId": "KnightRider_clock",
                 "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
+                "targetNodeInputId": "1"
               },
               {
                 "sourceNodeId": "KnightRider_reset",
                 "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
+                "targetNodeInputId": "1"
               }
             ],
             "label": "stateReg",
@@ -390,12 +753,12 @@
               {
                 "sourceNodeId": "KnightRider_clock",
                 "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
+                "targetNodeInputId": "1"
               },
               {
                 "sourceNodeId": "KnightRider_reset",
                 "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
+                "targetNodeInputId": "1"
               }
             ],
             "label": "ledReg",
@@ -405,29 +768,19 @@
             "attrs": [
               {
                 "key": "type",
-                "value": "instance"
+                "value": "I/O"
               }
             ],
-            "id": "KnightRider_14",
+            "id": "KnightRider/Tick_tick_clock",
             "incomingEdges": [
               {
                 "sourceNodeId": "KnightRider_clock",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "KnightRider_reset",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Tick",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "1"
               }
             ],
-            "label": "Tick",
-            "namespace": "KnightRider"
+            "label": "clock",
+            "namespace": "KnightRider/Tick_tick/Inputs"
           },
           {
             "attrs": [
@@ -436,21 +789,674 @@
                 "value": "I/O"
               }
             ],
-            "id": "KnightRider_io_led",
+            "id": "KnightRider/Tick_tick_reset",
             "incomingEdges": [
               {
-                "sourceNodeId": "KnightRider_13",
+                "sourceNodeId": "KnightRider_reset",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "reset",
+            "namespace": "KnightRider/Tick_tick/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "KnightRider/Tick_tick_io_tick",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "io_tick",
+            "namespace": "KnightRider/Tick_tick/Outputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "KnightRider/Tick_tick_0",
+            "incomingEdges": [],
+            "label": "1",
+            "namespace": "KnightRider/Tick_tick"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "KnightRider/Tick_tick_1",
+            "incomingEdges": [],
+            "label": "8333332",
+            "namespace": "KnightRider/Tick_tick"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "KnightRider/Tick_tick_2",
+            "incomingEdges": [],
+            "label": "0",
+            "namespace": "KnightRider/Tick_tick"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "folder"
+              },
+              {
+                "key": "fillcolor",
+                "value": "gainsboro"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "seq"
+              }
+            ],
+            "id": "KnightRider/Tick_tick_3",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightRider/Tick_tick/CombGroup_4_6",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightRider/Tick_tick_2",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightRider/Tick_tick_clock",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              },
+              {
+                "sourceNodeId": "KnightRider/Tick_tick_reset",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "r1",
+            "namespace": "KnightRider/Tick_tick"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_15",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_13",
                 "sourceNodeOutputId": "0",
                 "targetNodeInputId": "0"
               }
             ],
-            "label": "io_led",
-            "namespace": "KnightRider/Outputs"
+            "label": "comb.extract",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
           },
           {
-            "id": "om.class_0",
-            "label": "Unknown Module",
-            "namespace": "om.class"
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_19",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_15",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_18",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "|",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "invtrapezium"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_20",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_19",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_12",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_14",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick_io_tick",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "mux",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_16",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_13",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "comb.extract",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_17",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_16",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_9",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "^",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_18",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_12",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_17",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "&",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_21",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_13",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "comb.extract",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_22",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_21",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_10",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "comb.concat",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "invtrapezium"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_25",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_12",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_22",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_24",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "mux",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "invtrapezium"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_26",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_13",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_25",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_14",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick_io_tick",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "mux",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_23",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_13",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "comb.extract",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/CombGroup_15_24",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/CombGroup_15_23",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight_10",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "comb.concat",
+            "namespace": "KnightTop/KnightRider_knight/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/Tick_tick/CombGroup_4_4",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick_3",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick_1",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "==",
+            "namespace": "KnightTop/KnightRider_knight/Tick_tick/CombGroup_4"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "invtrapezium"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/Tick_tick/CombGroup_4_6",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick/CombGroup_4_4",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick/CombGroup_4_5",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick_2",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "mux",
+            "namespace": "KnightTop/KnightRider_knight/Tick_tick/CombGroup_4"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightTop/KnightRider_knight/Tick_tick/CombGroup_4_5",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick_3",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick_0",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "+",
+            "namespace": "KnightTop/KnightRider_knight/Tick_tick/CombGroup_4"
           },
           {
             "attrs": [
@@ -662,6 +1668,11 @@
                 "sourceNodeId": "KnightRider_14",
                 "sourceNodeOutputId": "0",
                 "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightRider/Tick_tick_io_tick",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
               }
             ],
             "label": "mux",
@@ -907,6 +1918,11 @@
                 "sourceNodeId": "KnightRider_14",
                 "sourceNodeOutputId": "0",
                 "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightRider/Tick_tick_io_tick",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
               }
             ],
             "label": "mux",
@@ -976,6 +1992,116 @@
             ],
             "label": "comb.concat",
             "namespace": "KnightRider/CombGroup_15"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightRider/Tick_tick/CombGroup_4_4",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightRider/Tick_tick_3",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightRider/Tick_tick_1",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "==",
+            "namespace": "KnightRider/Tick_tick/CombGroup_4"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "invtrapezium"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightRider/Tick_tick/CombGroup_4_6",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightRider/Tick_tick/CombGroup_4_4",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightRider/Tick_tick/CombGroup_4_5",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightRider/Tick_tick_2",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "mux",
+            "namespace": "KnightRider/Tick_tick/CombGroup_4"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "KnightRider/Tick_tick/CombGroup_4_5",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "KnightRider/Tick_tick_3",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "KnightRider/Tick_tick_0",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "+",
+            "namespace": "KnightRider/Tick_tick/CombGroup_4"
           }
         ]
       }

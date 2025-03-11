@@ -6,12 +6,12 @@
     "backgroundColor": "yellow"
   },
   "comb": {
-    "backgroundColor": "red"
+    "backgroundColor": "#fc6061"
   },
   "instance": {
-    "backgroundColor": "lime"
+    "backgroundColor": "orange"
   },
   "seq": {
-    "backgroundColor": "orange"
+    "backgroundColor": "lime"
   }
 }
