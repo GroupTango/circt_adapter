@@ -5,7 +5,7 @@ import { getAttributeKeyLabel, getAttributeValueLabel, modelTextBox, singularAtt
 // test doesn't run in CLI ("GPU stall due to readpixels")
 // give filepath arguments in cypress environment (relative from project root)
 
-describe("Check membership of all (unique) graph nodes", () => {
+describe("Check membership of all graph nodes", () => {
   const filepaths = Cypress.env("filepaths");
   filepaths.forEach((filepath) => {
     it(`Correctly loads file ${filepath}`, () => {
@@ -29,20 +29,20 @@ describe("Check membership of all (unique) graph nodes", () => {
           for (let i = 0; i < subgraph.length; i++) {
             let currentNode = subgraph[i];
             //cy.log(currentNode);
-            describe(`Correctly loads node ${currentNode.id} of json file ${filepath}`, () => {
-              let label = currentNode.label;
-              let id = currentNode.id;
-
-              if (seen.has(label)) { } else {
-                seen.add(label);
-                label = label.replace(/[-[\]{}()*+?.,\\^$|]/g, "\\$&") // escape all special characters, because the modelexp search takes regex
+            if (seen.has(currentNode.id)) {} else { // this check is pointless, but the test page was hanging before I added it
+              describe(`Correctly loads node ${currentNode.id} of json file ${filepath}`, () => {
+                seen.add(currentNode.id);
+                let label = currentNode.label;
+                let id = currentNode.id;
   
+                label = label.replace(/[-[\]{}()*+?.,\\^$|]/g, "\\$&") // escape all special characters, because the modelexp search takes regex
+    
                 if (i == 0) {
                   searchSelect(id, currentNode.label);
                 } else {
                   searchNext(id, currentNode.label);
                 }
-    
+      
                 // input checking
                 // for each each (i, edge):
                 // search (n-i) child for text of label[edge]
@@ -57,7 +57,7 @@ describe("Check membership of all (unique) graph nodes", () => {
                     }
                   }
                 }
-
+  
                 if (currentNode.hasOwnProperty("attrs")) {
                   let attrs = currentNode.attrs;
                   const attrCount = attrs.length;
@@ -75,8 +75,8 @@ describe("Check membership of all (unique) graph nodes", () => {
                     }
                   }
                 }
-              } // there is no point in checking duplicate labels
-            })
+              })
+            }
           }
         })
       })

@@ -10,6 +10,6 @@ export default defineConfig({
   videoCompression: true,
   // temp: remove when done testing
   env: {
-    filepaths: ['examples/three/three-module.json']
+    filepaths: ['examples/three/three-module.json'] // relative path from project root
   }
 });
