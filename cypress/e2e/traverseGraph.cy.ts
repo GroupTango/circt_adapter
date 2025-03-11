@@ -1,6 +1,6 @@
 import { searchNext, searchSelect, verifyInfoPanel } from "../utils/node";
 import { Model, openModel, openModelFromRoot } from "../utils/openModel";
-import { modelTextBox } from "../utils/selectors";
+import { getAttributeKeyLabel, getAttributeValueLabel, modelTextBox, singularAttributeKey, singularAttributeValue } from "../utils/selectors";
 
 // test doesn't run in CLI ("GPU stall due to readpixels")
 // give filepath arguments in cypress environment (relative from project root)
@@ -48,9 +48,31 @@ describe("Check membership of all (unique) graph nodes", () => {
                 // search (n-i) child for text of label[edge]
                 if (currentNode.hasOwnProperty("incomingEdges")) {
                   const edgeCount = currentNode.incomingEdges.length;
-                  for (i = 0; i < edgeCount; i++) {
-                    cy.get(`:nth-child(${i+1}) > .name-row .name`).contains(labels[currentNode.incomingEdges[i].sourceNodeId]);
+                  if (edgeCount == 1) {
+                    cy.get(`.name-row .name`).contains(labels[currentNode.incomingEdges[0].sourceNodeId])
+                  } else {
+                    for (i = 0; i < edgeCount; i++) {
+                      cy.get(`:nth-child(${i+1}) > .name-row .name`).contains(labels[currentNode.incomingEdges[i].sourceNodeId]);
+                      cy.wait(200);
+                    }
+                  }
+                }
+
+                if (currentNode.hasOwnProperty("attrs")) {
+                  let attrs = currentNode.attrs;
+                  const attrCount = attrs.length;
+                  if (attrCount == 1) {
+                    cy.get(singularAttributeKey).contains(attrs[0].key);
                     cy.wait(200);
+                    cy.get(singularAttributeValue).contains(attrs[0].value);
+                    cy.wait(200);
+                  } else {
+                    for (i = 0; i < attrCount; i++) {
+                      cy.get(getAttributeKeyLabel(i+1)).contains(attrs[i].key);
+                      cy.wait(200);
+                      cy.get(getAttributeValueLabel(i+1)).contains(attrs[i].value);
+                      cy.wait(200);
+                    }
                   }
                 }
               } // there is no point in checking duplicate labels

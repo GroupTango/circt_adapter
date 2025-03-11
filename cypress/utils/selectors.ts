@@ -15,5 +15,15 @@ export const infoPanelSegements = {
   layerInfo: "Layer info",
   attrs: "Attributes",
 };
+export const singularAttributeKey =  ".metadata-table > tr.ng-star-inserted > .key > hoverable-label > .bubble";
+export const singularAttributeValue = ".metadata-table > tr.ng-star-inserted > .value > expandable-info-text > .container > .one-line-text"
 
 export type InfoPanelSegment = keyof typeof infoPanelSegements;
+
+export const getAttributeValueLabel = (attributeNumber: number) => {
+  return `.metadata-table > :nth-child(${attributeNumber}) > .value > expandable-info-text > .container > .one-line-text`;
+}
+
+export const getAttributeKeyLabel = (attributeNumber: number) => {
+  return `.metadata-table > :nth-child(${attributeNumber}) > .key > hoverable-label > .bubble`
+}
