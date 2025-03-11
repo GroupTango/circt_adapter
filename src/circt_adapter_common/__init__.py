@@ -9,7 +9,6 @@ def ConvertCirctToJson(model_path: str, command : str) -> str:
   circt_path = os.environ.get('CIRCT_PATH', 'circt-opt')
   subprocess.run([
       circt_path,
-      # '--hw-print-module-json',
       command,
       model_path,
       '--outfile',
@@ -17,7 +16,7 @@ def ConvertCirctToJson(model_path: str, command : str) -> str:
   ])
   with open('out.json', mode='rb') as src_file:
     result = src_file.read()
-  return result
+  return result.decode()
 
 
 def ConvertJsonToGraphs(json_str: str):
