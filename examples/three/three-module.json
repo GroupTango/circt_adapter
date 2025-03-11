@@ -18,6 +18,7 @@
               }
             ],
             "id": "KnightTop_clock",
+            "incomingEdges": [],
             "label": "clock",
             "namespace": "KnightTop/Inputs"
           },
@@ -29,6 +30,7 @@
               }
             ],
             "id": "KnightTop_reset",
+            "incomingEdges": [],
             "label": "reset",
             "namespace": "KnightTop/Inputs"
           },
@@ -40,6 +42,7 @@
               }
             ],
             "id": "KnightTop_io_btn",
+            "incomingEdges": [],
             "label": "io_btn",
             "namespace": "KnightTop/Inputs"
           },
@@ -56,11 +59,6 @@
                 "sourceNodeId": "KnightTop_29",
                 "sourceNodeOutputId": "1",
                 "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "KnightTop/KnightRider_knight_io_led",
-                "sourceNodeOutputId": "1",
-                "targetNodeInputId": "1"
               }
             ],
             "label": "io_led",
@@ -74,13 +72,7 @@
               }
             ],
             "id": "KnightTop/KnightRider_knight_clock",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "KnightTop_clock",
-                "sourceNodeOutputId": "1",
-                "targetNodeInputId": "1"
-              }
-            ],
+            "incomingEdges": [],
             "label": "clock",
             "namespace": "KnightTop/KnightRider_knight/Inputs"
           },
@@ -92,13 +84,7 @@
               }
             ],
             "id": "KnightTop/KnightRider_knight_reset",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "KnightTop_reset",
-                "sourceNodeOutputId": "1",
-                "targetNodeInputId": "1"
-              }
-            ],
+            "incomingEdges": [],
             "label": "reset",
             "namespace": "KnightTop/KnightRider_knight/Inputs"
           },
@@ -278,13 +264,7 @@
               }
             ],
             "id": "KnightTop/KnightRider_knight/Tick_tick_clock",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "KnightTop/KnightRider_knight_clock",
-                "sourceNodeOutputId": "1",
-                "targetNodeInputId": "1"
-              }
-            ],
+            "incomingEdges": [],
             "label": "clock",
             "namespace": "KnightTop/KnightRider_knight/Tick_tick/Inputs"
           },
@@ -296,13 +276,7 @@
               }
             ],
             "id": "KnightTop/KnightRider_knight/Tick_tick_reset",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "KnightTop/KnightRider_knight_reset",
-                "sourceNodeOutputId": "1",
-                "targetNodeInputId": "1"
-              }
-            ],
+            "incomingEdges": [],
             "label": "reset",
             "namespace": "KnightTop/KnightRider_knight/Tick_tick/Inputs"
           },
@@ -316,7 +290,7 @@
             "id": "KnightTop/KnightRider_knight/Tick_tick_io_tick",
             "incomingEdges": [
               {
-                "sourceNodeId": "",
+                "sourceNodeId": "KnightTop/KnightRider_knight/Tick_tick/CombGroup_4_4",
                 "sourceNodeOutputId": "1",
                 "targetNodeInputId": "0"
               }
@@ -437,6 +411,7 @@
               }
             ],
             "id": "Tick_clock",
+            "incomingEdges": [],
             "label": "clock",
             "namespace": "Tick/Inputs"
           },
@@ -448,6 +423,7 @@
               }
             ],
             "id": "Tick_reset",
+            "incomingEdges": [],
             "label": "reset",
             "namespace": "Tick/Inputs"
           },
@@ -461,7 +437,7 @@
             "id": "Tick_io_tick",
             "incomingEdges": [
               {
-                "sourceNodeId": "",
+                "sourceNodeId": "Tick/CombGroup_4_4",
                 "sourceNodeOutputId": "1",
                 "targetNodeInputId": "0"
               }
@@ -582,6 +558,7 @@
               }
             ],
             "id": "KnightRider_clock",
+            "incomingEdges": [],
             "label": "clock",
             "namespace": "KnightRider/Inputs"
           },
@@ -593,6 +570,7 @@
               }
             ],
             "id": "KnightRider_reset",
+            "incomingEdges": [],
             "label": "reset",
             "namespace": "KnightRider/Inputs"
           },
@@ -810,7 +788,7 @@
             "id": "KnightRider/Tick_tick_io_tick",
             "incomingEdges": [
               {
-                "sourceNodeId": "",
+                "sourceNodeId": "KnightRider/Tick_tick/CombGroup_4_4",
                 "sourceNodeOutputId": "1",
                 "targetNodeInputId": "0"
               }

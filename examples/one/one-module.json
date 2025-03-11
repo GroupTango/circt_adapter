@@ -3,8 +3,13 @@
     "label": "model.json",
     "subgraphs": [
       {
-        "id": "1",
+        "id": "2",
         "nodes": [
+          {
+            "id": "PassthroughGenerator_Class_0",
+            "label": "Unknown Module",
+            "namespace": "PassthroughGenerator_Class"
+          },
           {
             "attrs": [
               {
@@ -13,6 +18,7 @@
               }
             ],
             "id": "PassthroughGenerator_clock",
+            "incomingEdges": [],
             "label": "clock",
             "namespace": "PassthroughGenerator/Inputs"
           },
@@ -24,6 +30,7 @@
               }
             ],
             "id": "PassthroughGenerator_reset",
+            "incomingEdges": [],
             "label": "reset",
             "namespace": "PassthroughGenerator/Inputs"
           },
@@ -35,6 +42,7 @@
               }
             ],
             "id": "PassthroughGenerator_io_in",
+            "incomingEdges": [],
             "label": "io_in",
             "namespace": "PassthroughGenerator/Inputs"
           },
@@ -49,11 +57,6 @@
             "incomingEdges": [],
             "label": "io_out",
             "namespace": "PassthroughGenerator/Outputs"
-          },
-          {
-            "id": "om.class_0",
-            "label": "Unknown Module",
-            "namespace": "om.class"
           }
         ]
       }
