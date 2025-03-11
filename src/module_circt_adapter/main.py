@@ -5,7 +5,7 @@ import json
 from typing import Dict
 from model_explorer import Adapter, AdapterMetadata
 from model_explorer.types import GraphCollection, ModelExplorerGraphs
-from cirt_adapter_common import ConvertCirctToJson, ConvertJsonToGraphs
+from circt_adapter_common import ConvertCirctToJson, ConvertJsonToGraphs
 
 class ModuleCirctAdapter(Adapter):
   metadata = AdapterMetadata(
