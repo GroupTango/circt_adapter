@@ -7,7 +7,7 @@ from model_explorer import *
 from model_explorer.types import GraphCollection, ModelExplorerGraphs
 
 
-class CirctAdapter(Adapter):
+class ModuleCirctAdapter(Adapter):
 
   metadata = AdapterMetadata(
       id='circt_adapter',
@@ -36,11 +36,9 @@ class CirctAdapter(Adapter):
 
 def ConvertCirctToJson(model_path: str) -> str:
   circt_path = os.environ.get('CIRCT_PATH', 'circt-opt')
-  result = subprocess.run(
-      [circt_path, '--hw-print-module-json', model_path, '-o', '/dev/null'],
-      stderr=subprocess.PIPE,
-  ).stderr.decode('utf-8')
-  result = result[result.find('JSON:') + 5 :]
+  result = subprocess.run([circt_path, '--hw-print-module-json', model_path,"--outfile","out.json"])
+  with open("out.json", mode='rb') as src_file:
+     result = src_file.read()
   return result
 
 
