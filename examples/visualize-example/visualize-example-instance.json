@@ -1,1 +1,34 @@
-[{"label":"model.json","subgraphs":[{"id":"2","nodes":[{"attrs":[{"key":"type","value":"Top Level"}],"id":"0","label":"Self-Contained","namespace":"A"},{"attrs":[{"key":"type","value":"Top Level"}],"id":"1","label":"A","namespace":"B"}]}]}]
+[
+  {
+    "label": "model.json",
+    "subgraphs": [
+      {
+        "id": "2",
+        "nodes": [
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
+            "id": "0",
+            "label": "Self-Contained",
+            "namespace": "A"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "Top Level"
+              }
+            ],
+            "id": "1",
+            "label": "A",
+            "namespace": "B"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -14,7 +14,7 @@
             ],
             "id": "0",
             "label": "Unknown Module",
-            "namespace": "om.class"
+            "namespace": "PassthroughGenerator_Class"
           },
           {
             "attrs": [

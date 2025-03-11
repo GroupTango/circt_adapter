@@ -3,8 +3,13 @@
     "label": "model.json",
     "subgraphs": [
       {
-        "id": "1",
+        "id": "2",
         "nodes": [
+          {
+            "id": "PassthroughGenerator_Class_0",
+            "label": "Unknown Module",
+            "namespace": "PassthroughGenerator_Class"
+          },
           {
             "attrs": [
               {
@@ -49,11 +54,6 @@
             "incomingEdges": [],
             "label": "io_out",
             "namespace": "PassthroughGenerator/Outputs"
-          },
-          {
-            "id": "om.class_0",
-            "label": "Unknown Module",
-            "namespace": "om.class"
           }
         ]
       }
