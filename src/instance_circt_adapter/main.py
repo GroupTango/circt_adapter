@@ -27,7 +27,7 @@ class InstanceCirctAdapter(Adapter):
   def convert(self, model_path: str, settings: Dict) -> ModelExplorerGraphs:
     src_string = ''
     if model_path.endswith('.mlir'):
-      src_string = ConvertCirctToJson(model_path, "--hw-print-instance-json")
+      src_string = ConvertCirctToJson(model_path, '--hw-print-instance-json')
     elif model_path.endswith('.json'):
       with open(model_path, mode='rb') as src_file:
         src_string = src_file.read()

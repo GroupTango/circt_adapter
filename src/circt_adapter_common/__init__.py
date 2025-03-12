@@ -3,9 +3,10 @@ import subprocess
 import json
 from model_explorer.types import GraphCollection
 
-__all__ = ["ConvertCirctToJson", "ConvertJsonToGraphs"]
+__all__ = ['ConvertCirctToJson', 'ConvertJsonToGraphs']
 
-def ConvertCirctToJson(model_path: str, command : str) -> str:
+
+def ConvertCirctToJson(model_path: str, command: str) -> str:
   circt_path = os.environ.get('CIRCT_PATH', 'circt-opt')
   subprocess.run([
       circt_path,

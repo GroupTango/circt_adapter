@@ -7,6 +7,7 @@ from model_explorer import Adapter, AdapterMetadata
 from model_explorer.types import GraphCollection, ModelExplorerGraphs
 from circt_adapter_common import ConvertCirctToJson, ConvertJsonToGraphs
 
+
 class ModuleCirctAdapter(Adapter):
   metadata = AdapterMetadata(
       id='module_circt_adapter',
@@ -25,10 +26,9 @@ class ModuleCirctAdapter(Adapter):
   def convert(self, model_path: str, settings: Dict) -> ModelExplorerGraphs:
     src_string = ''
     if model_path.endswith('.mlir'):
-      src_string = ConvertCirctToJson(model_path,  "--hw-print-module-json")
+      src_string = ConvertCirctToJson(model_path, '--hw-print-module-json')
     elif model_path.endswith('.json'):
       with open(model_path, mode='rb') as src_file:
         src_string = src_file.read()
 
     return {'graphCollections': ConvertJsonToGraphs(src_string)}
-
