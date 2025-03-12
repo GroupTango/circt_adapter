@@ -18,7 +18,6 @@
               }
             ],
             "id": "Mux2_io_sel",
-            "incomingEdges": [],
             "label": "io_sel",
             "namespace": "Mux2/Inputs"
           },
@@ -30,7 +29,6 @@
               }
             ],
             "id": "Mux2_io_in0",
-            "incomingEdges": [],
             "label": "io_in0",
             "namespace": "Mux2/Inputs"
           },
@@ -42,7 +40,6 @@
               }
             ],
             "id": "Mux2_io_in1",
-            "incomingEdges": [],
             "label": "io_in1",
             "namespace": "Mux2/Inputs"
           },
@@ -87,12 +84,151 @@
           {
             "attrs": [
               {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux2/CombGroup_5_5",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux2_io_in1",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              },
+              {
+                "sourceNodeId": "Mux2_io_sel",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "&",
+            "namespace": "Mux2/CombGroup_5"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux2/CombGroup_6_6",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux2_4",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Mux2_io_sel",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "^",
+            "namespace": "Mux2/CombGroup_6"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux2/CombGroup_6_7",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux2/CombGroup_6_6",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Mux2_io_in0",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "&",
+            "namespace": "Mux2/CombGroup_6"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux2/CombGroup_5_8",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux2/CombGroup_6_7",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Mux2/CombGroup_5_5",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "|",
+            "namespace": "Mux2/CombGroup_5"
+          },
+          {
+            "attrs": [
+              {
                 "key": "type",
                 "value": "I/O"
               }
             ],
             "id": "Invert_io_in",
-            "incomingEdges": [],
             "label": "io_in",
             "namespace": "Invert/Inputs"
           },
@@ -137,12 +273,46 @@
           {
             "attrs": [
               {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Invert/CombGroup_1_1",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Invert_0",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Invert_io_in",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "^",
+            "namespace": "Invert/CombGroup_1"
+          },
+          {
+            "attrs": [
+              {
                 "key": "type",
                 "value": "I/O"
               }
             ],
             "id": "Mux4_clock",
-            "incomingEdges": [],
             "label": "clock",
             "namespace": "Mux4/Inputs"
           },
@@ -154,7 +324,6 @@
               }
             ],
             "id": "Mux4_reset",
-            "incomingEdges": [],
             "label": "reset",
             "namespace": "Mux4/Inputs"
           },
@@ -166,7 +335,6 @@
               }
             ],
             "id": "Mux4_io_in0",
-            "incomingEdges": [],
             "label": "io_in0",
             "namespace": "Mux4/Inputs"
           },
@@ -178,7 +346,6 @@
               }
             ],
             "id": "Mux4_io_in1",
-            "incomingEdges": [],
             "label": "io_in1",
             "namespace": "Mux4/Inputs"
           },
@@ -190,7 +357,6 @@
               }
             ],
             "id": "Mux4_io_in2",
-            "incomingEdges": [],
             "label": "io_in2",
             "namespace": "Mux4/Inputs"
           },
@@ -202,7 +368,6 @@
               }
             ],
             "id": "Mux4_io_in3",
-            "incomingEdges": [],
             "label": "io_in3",
             "namespace": "Mux4/Inputs"
           },
@@ -214,7 +379,6 @@
               }
             ],
             "id": "Mux4_io_sel",
-            "incomingEdges": [],
             "label": "io_sel",
             "namespace": "Mux4/Inputs"
           },
@@ -227,11 +391,6 @@
             ],
             "id": "Mux4_io_out1",
             "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4_15",
-                "sourceNodeOutputId": "1",
-                "targetNodeInputId": "0"
-              },
               {
                 "sourceNodeId": "Mux4/Mux2_m2_io_out",
                 "sourceNodeOutputId": "1",
@@ -251,11 +410,6 @@
             "id": "Mux4_io_out2",
             "incomingEdges": [
               {
-                "sourceNodeId": "Mux4_11",
-                "sourceNodeOutputId": "1",
-                "targetNodeInputId": "0"
-              },
-              {
                 "sourceNodeId": "Mux4/Invert_i1_io_out",
                 "sourceNodeOutputId": "1",
                 "targetNodeInputId": "1"
@@ -267,6 +421,66 @@
           {
             "attrs": [
               {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/CombGroup_13_13",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Invert_i1_io_out",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "comb.extract",
+            "namespace": "Mux4/CombGroup_13"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/CombGroup_16_16",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Invert_i1_io_out",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "comb.extract",
+            "namespace": "Mux4/CombGroup_16"
+          },
+          {
+            "attrs": [
+              {
                 "key": "type",
                 "value": "I/O"
               }
@@ -274,7 +488,7 @@
             "id": "Mux4/Mux2_m2_io_sel",
             "incomingEdges": [
               {
-                "sourceNodeId": "Mux4/CombGroup_13_16",
+                "sourceNodeId": "Mux4/CombGroup_16_16",
                 "sourceNodeOutputId": "1",
                 "targetNodeInputId": "0"
               }
@@ -355,6 +569,146 @@
             "incomingEdges": [],
             "label": "1",
             "namespace": "Mux4/Mux2_m2"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/Mux2_m2/CombGroup_5_5",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Mux2_m2_io_in1",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              },
+              {
+                "sourceNodeId": "Mux4/Mux2_m2_io_sel",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "&",
+            "namespace": "Mux4/Mux2_m2/CombGroup_5"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/Mux2_m2/CombGroup_6_6",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Mux2_m2_4",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Mux4/Mux2_m2_io_sel",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "^",
+            "namespace": "Mux4/Mux2_m2/CombGroup_6"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/Mux2_m2/CombGroup_6_7",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Mux2_m2/CombGroup_6_6",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Mux4/Mux2_m2_io_in0",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "&",
+            "namespace": "Mux4/Mux2_m2/CombGroup_6"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/Mux2_m2/CombGroup_5_8",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Mux2_m2/CombGroup_6_7",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Mux4/Mux2_m2/CombGroup_5_5",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "|",
+            "namespace": "Mux4/Mux2_m2/CombGroup_5"
           },
           {
             "attrs": [
@@ -451,6 +805,146 @@
           {
             "attrs": [
               {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/Mux2_m1/CombGroup_5_5",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Mux2_m1_io_in1",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              },
+              {
+                "sourceNodeId": "Mux4/Mux2_m1_io_sel",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "&",
+            "namespace": "Mux4/Mux2_m1/CombGroup_5"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/Mux2_m1/CombGroup_6_6",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Mux2_m1_4",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Mux4/Mux2_m1_io_sel",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "^",
+            "namespace": "Mux4/Mux2_m1/CombGroup_6"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/Mux2_m1/CombGroup_6_7",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Mux2_m1/CombGroup_6_6",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Mux4/Mux2_m1_io_in0",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "&",
+            "namespace": "Mux4/Mux2_m1/CombGroup_6"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/Mux2_m1/CombGroup_5_8",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Mux2_m1/CombGroup_6_7",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Mux4/Mux2_m1/CombGroup_5_5",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "|",
+            "namespace": "Mux4/Mux2_m1/CombGroup_5"
+          },
+          {
+            "attrs": [
+              {
                 "key": "type",
                 "value": "I/O"
               }
@@ -543,587 +1037,6 @@
           {
             "attrs": [
               {
-                "key": "type",
-                "value": "I/O"
-              }
-            ],
-            "id": "Mux4/Invert_i1_io_in",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4_io_sel",
-                "sourceNodeOutputId": "1",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "io_in",
-            "namespace": "Mux4/Invert_i1/Inputs"
-          },
-          {
-            "attrs": [
-              {
-                "key": "type",
-                "value": "I/O"
-              }
-            ],
-            "id": "Mux4/Invert_i1_io_out",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4/Invert_i1/CombGroup_1_1",
-                "sourceNodeOutputId": "1",
-                "targetNodeInputId": "0"
-              }
-            ],
-            "label": "io_out",
-            "namespace": "Mux4/Invert_i1/Outputs"
-          },
-          {
-            "attrs": [
-              {
-                "key": "fillcolor",
-                "value": "darkgoldenrod1"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "hw"
-              }
-            ],
-            "id": "Mux4/Invert_i1_0",
-            "incomingEdges": [],
-            "label": "3",
-            "namespace": "Mux4/Invert_i1"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux2/CombGroup_5_5",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux2_io_in1",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              },
-              {
-                "sourceNodeId": "Mux2_io_sel",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "&",
-            "namespace": "Mux2/CombGroup_5"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux2/CombGroup_5_8",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux2/CombGroup_6_7",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux2/CombGroup_5_5",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              }
-            ],
-            "label": "|",
-            "namespace": "Mux2/CombGroup_5"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux2/CombGroup_6_6",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux2_4",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux2_io_sel",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "^",
-            "namespace": "Mux2/CombGroup_6"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux2/CombGroup_6_7",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux2/CombGroup_6_6",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux2_io_in0",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "&",
-            "namespace": "Mux2/CombGroup_6"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Invert/CombGroup_1_1",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Invert_0",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Invert_io_in",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "^",
-            "namespace": "Invert/CombGroup_1"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/CombGroup_13_13",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4_11",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux4/Invert_i1_io_out",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "comb.extract",
-            "namespace": "Mux4/CombGroup_13"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/CombGroup_13_16",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4_11",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux4/Invert_i1_io_out",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "comb.extract",
-            "namespace": "Mux4/CombGroup_13"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/Mux2_m2/CombGroup_5_5",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4/Mux2_m2_io_in1",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              },
-              {
-                "sourceNodeId": "Mux4/Mux2_m2_io_sel",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "&",
-            "namespace": "Mux4/Mux2_m2/CombGroup_5"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/Mux2_m2/CombGroup_5_8",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4/Mux2_m2/CombGroup_6_7",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux4/Mux2_m2/CombGroup_5_5",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              }
-            ],
-            "label": "|",
-            "namespace": "Mux4/Mux2_m2/CombGroup_5"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/Mux2_m2/CombGroup_6_6",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4/Mux2_m2_4",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux4/Mux2_m2_io_sel",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "^",
-            "namespace": "Mux4/Mux2_m2/CombGroup_6"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/Mux2_m2/CombGroup_6_7",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4/Mux2_m2/CombGroup_6_6",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux4/Mux2_m2_io_in0",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "&",
-            "namespace": "Mux4/Mux2_m2/CombGroup_6"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/Mux2_m1/CombGroup_5_5",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4/Mux2_m1_io_in1",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              },
-              {
-                "sourceNodeId": "Mux4/Mux2_m1_io_sel",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "&",
-            "namespace": "Mux4/Mux2_m1/CombGroup_5"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/Mux2_m1/CombGroup_5_8",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4/Mux2_m1/CombGroup_6_7",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux4/Mux2_m1/CombGroup_5_5",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              }
-            ],
-            "label": "|",
-            "namespace": "Mux4/Mux2_m1/CombGroup_5"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/Mux2_m1/CombGroup_6_6",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4/Mux2_m1_4",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux4/Mux2_m1_io_sel",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "^",
-            "namespace": "Mux4/Mux2_m1/CombGroup_6"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/Mux2_m1/CombGroup_6_7",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4/Mux2_m1/CombGroup_6_6",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux4/Mux2_m1_io_in0",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "1"
-              }
-            ],
-            "label": "&",
-            "namespace": "Mux4/Mux2_m1/CombGroup_6"
-          },
-          {
-            "attrs": [
-              {
                 "key": "shape",
                 "value": "oval"
               },
@@ -1154,41 +1067,6 @@
               }
             ],
             "label": "&",
-            "namespace": "Mux4/Mux2_m0/CombGroup_5"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "Mux4/Mux2_m0/CombGroup_5_8",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "Mux4/Mux2_m0/CombGroup_6_7",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "Mux4/Mux2_m0/CombGroup_5_5",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              }
-            ],
-            "label": "|",
             "namespace": "Mux4/Mux2_m0/CombGroup_5"
           },
           {
@@ -1260,6 +1138,97 @@
             ],
             "label": "&",
             "namespace": "Mux4/Mux2_m0/CombGroup_6"
+          },
+          {
+            "attrs": [
+              {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "Mux4/Mux2_m0/CombGroup_5_8",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Mux2_m0/CombGroup_6_7",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "Mux4/Mux2_m0/CombGroup_5_5",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "|",
+            "namespace": "Mux4/Mux2_m0/CombGroup_5"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "Mux4/Invert_i1_io_in",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4_io_sel",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "1"
+              }
+            ],
+            "label": "io_in",
+            "namespace": "Mux4/Invert_i1/Inputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "type",
+                "value": "I/O"
+              }
+            ],
+            "id": "Mux4/Invert_i1_io_out",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "Mux4/Invert_i1/CombGroup_1_1",
+                "sourceNodeOutputId": "1",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "io_out",
+            "namespace": "Mux4/Invert_i1/Outputs"
+          },
+          {
+            "attrs": [
+              {
+                "key": "fillcolor",
+                "value": "darkgoldenrod1"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "hw"
+              }
+            ],
+            "id": "Mux4/Invert_i1_0",
+            "incomingEdges": [],
+            "label": "3",
+            "namespace": "Mux4/Invert_i1"
           },
           {
             "attrs": [
