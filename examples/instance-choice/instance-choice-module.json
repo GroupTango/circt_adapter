@@ -13,7 +13,6 @@
               }
             ],
             "id": "top_clk",
-            "incomingEdges": [],
             "label": "clk",
             "namespace": "top/Inputs"
           },
@@ -25,7 +24,6 @@
               }
             ],
             "id": "top_rst",
-            "incomingEdges": [],
             "label": "rst",
             "namespace": "top/Inputs"
           },
@@ -65,7 +63,13 @@
           {
             "attrs": [],
             "id": "top_22",
-            "incomingEdges": [],
+            "incomingEdges": [
+              {
+                "sourceNodeId": "top_clk",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "1"
+              }
+            ],
             "label": "sv.alwaysff",
             "namespace": "top"
           },
@@ -77,7 +81,6 @@
               }
             ],
             "id": "TargetDefault_a",
-            "incomingEdges": [],
             "label": "a",
             "namespace": "TargetDefault/Inputs"
           },
@@ -101,7 +104,6 @@
               }
             ],
             "id": "TargetA_a",
-            "incomingEdges": [],
             "label": "a",
             "namespace": "TargetA/Inputs"
           },
@@ -146,12 +148,46 @@
           {
             "attrs": [
               {
+                "key": "shape",
+                "value": "oval"
+              },
+              {
+                "key": "fillcolor",
+                "value": "bisque"
+              },
+              {
+                "key": "style",
+                "value": "filled"
+              },
+              {
+                "key": "type",
+                "value": "comb"
+              }
+            ],
+            "id": "TargetA/CombGroup_1_1",
+            "incomingEdges": [
+              {
+                "sourceNodeId": "TargetA/CombGroup_1_1",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              },
+              {
+                "sourceNodeId": "TargetA_0",
+                "sourceNodeOutputId": "0",
+                "targetNodeInputId": "0"
+              }
+            ],
+            "label": "+",
+            "namespace": "TargetA/CombGroup_1"
+          },
+          {
+            "attrs": [
+              {
                 "key": "type",
                 "value": "I/O"
               }
             ],
             "id": "TargetB_a",
-            "incomingEdges": [],
             "label": "a",
             "namespace": "TargetB/Inputs"
           },
@@ -192,41 +228,6 @@
             "incomingEdges": [],
             "label": "15",
             "namespace": "TargetB"
-          },
-          {
-            "attrs": [
-              {
-                "key": "shape",
-                "value": "oval"
-              },
-              {
-                "key": "fillcolor",
-                "value": "bisque"
-              },
-              {
-                "key": "style",
-                "value": "filled"
-              },
-              {
-                "key": "type",
-                "value": "comb"
-              }
-            ],
-            "id": "TargetA/CombGroup_1_1",
-            "incomingEdges": [
-              {
-                "sourceNodeId": "TargetA/CombGroup_1_1",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              },
-              {
-                "sourceNodeId": "TargetA_0",
-                "sourceNodeOutputId": "0",
-                "targetNodeInputId": "0"
-              }
-            ],
-            "label": "+",
-            "namespace": "TargetA/CombGroup_1"
           },
           {
             "attrs": [
