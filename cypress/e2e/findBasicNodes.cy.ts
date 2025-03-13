@@ -1,4 +1,4 @@
-import { searchSelect, verifyInfoPanel } from "../utils/node";
+import { searchByLabel, searchSelect, verifyInfoPanel } from "../utils/node";
 import { Model, openModel } from "../utils/openModel";
 
 describe("Explore a basic graph", () => {
@@ -7,7 +7,7 @@ describe("Explore a basic graph", () => {
   });
 
   it("Finds top level node", () => {
-    searchSelect("PassthroughGenerator");
+    searchByLabel("PassthroughGenerator");
     verifyInfoPanel({
       layerInfo: {
         name: "PassthroughGenerator",
@@ -17,10 +17,10 @@ describe("Explore a basic graph", () => {
   });
 
   it("Finds output node", () => {
-    searchSelect("hw.output");
+    searchByLabel("io_in");
     verifyInfoPanel({
       nodeInfo: {
-        "op name": "hw.output",
+        "op name": "io_in",
         namespace: "PassthroughGenerator",
       },
     });

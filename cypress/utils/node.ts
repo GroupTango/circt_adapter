@@ -13,6 +13,14 @@ import {
   searchResults,
 } from "./selectors";
 
+export const searchByLabel = (s: string, select = s) => {
+  cy.get(searchInput).type(s);
+  cy.get(searchResults).contains(select).click();
+  cy.get(closeSearchResults).click();
+  cy.wait(200);
+  cy.get(canvas).click();
+}
+
 export const search = (search: string, select = search) => {
   cy.get(searchInput).type(search);
   cy.get(label).click();
