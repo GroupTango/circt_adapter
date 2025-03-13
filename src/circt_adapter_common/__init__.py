@@ -35,11 +35,11 @@ def ConvertJsonToGraphs(json_str: str):
         for item in resp
     ]
 
-  for i, ni in enumerate(resp):
-    for j, nj in enumerate(ni['subgraphs']):
-      for k, nk in enumerate(nj['nodes']):
+  for ni in resp:
+    for nj in ni['subgraphs']:
+      for nk in nj['nodes']:
         if 'attrs' in nk:
-          for l, nl in enumerate(nk['attrs']):
+          for nl in nk['attrs']:
             if (nl['key'] == 'type') and (nl['value'] in style_dict):
               nk['style'] = style_dict[nl['value']]
 
