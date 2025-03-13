@@ -8,4 +8,9 @@ export default defineConfig({
   },
   video: true,
   videoCompression: true,
+  // temp: remove when done testing
+  env: {
+    filepaths: ['examples/three/three-module.json'] // relative path from project root
+  },
+  defaultCommandTimeout: 8000
 });
