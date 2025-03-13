@@ -28,8 +28,7 @@ describe("Check membership of all graph nodes", () => {
           const subgraph = sub.nodes;
           for (let i = 0; i < subgraph.length; i++) {
             let currentNode = subgraph[i];
-            //cy.log(currentNode);
-            if (seen.has(currentNode.id)) {} else { // this check is pointless, but the test page was hanging before I added it
+            if (!seen.has(currentNode.id)) { // this check is pointless, but the test page was hanging before I added it
               describe(`Correctly loads node ${currentNode.id} of json file ${filepath}`, () => {
                 seen.add(currentNode.id);
                 let label = currentNode.label;
@@ -67,26 +66,6 @@ describe("Check membership of all graph nodes", () => {
                     attrs: toVerify
                   });
                 }
-
-                /*
-                if (currentNode.hasOwnProperty("attrs")) {
-                  let attrs = currentNode.attrs;
-                  const attrCount = attrs.length;
-                  if (attrCount == 1) {
-                    cy.get(singularAttributeKey).contains(attrs[0].key);
-                    cy.wait(200);
-                    cy.get(singularAttributeValue).contains(attrs[0].value);
-                    cy.wait(200);
-                  } else {
-                    for (i = 0; i < attrCount; i++) {
-                      cy.get(getAttributeKeyLabel(i+1)).contains(attrs[i].key);
-                      cy.wait(200);
-                      cy.get(getAttributeValueLabel(i+1)).contains(attrs[i].value);
-                      cy.wait(200);
-                    }
-                  }
-                }
-                */
               })
             }
           }
