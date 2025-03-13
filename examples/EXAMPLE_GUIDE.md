@@ -39,6 +39,14 @@ We can use `firtool` to reduce the `firrtl` dialect down to `hw`. Run the follow
 firtool -format=fir --ir-hw foo/bar.fir -o foo/bar.mlir
 ```
 
+# Running the Passes
+
+We have a convenience script `graphs.sh` which generates both DOT graphs from the pre-existing passes `hw-print-instance-graph` and `hw-print-module-graph`, _as well as_ generates the JSON files from our passes `hw-print-instance-json` and `hw-print-module-json`. Assuming your files have followed the naming convention above, and you have obtained your `.mlir` codefile, you may simply run (from _this directory_):
+
+```
+./graphs.sh example
+```
+
 ## CIRCT Instance and Module Graphs
 
 Recall that a "module" is a self-contained functional hardware unit (akin to a Verilog module), and an "instance" is a (usually named) instance of the module. For example, we might have two instances `m1`, `m2` of a `Mux2` module.
@@ -54,11 +62,11 @@ circt-opt --hw-print-module-graph foo/bar.mlir -o /dev/null 2>&1 | dot -Tpng -O
 
 ## Instance and Module JSONs
 
-We implement the `hw-print-module-json` and `hw-print-module-instance-json` passes.
+We implement the `hw-print-module-json` and `hw-print-instance-json` passes.
 
 To run:
 
 ```
 circt-opt --hw-print-module-json foo/bar.mlir -o /dev/null 2>'foo/bar-module.json'
-circt-opt --hw-print-module-instance-json foo/bar.mlir -o /dev/null 2>'foo/bar-instance.json'
+circt-opt --hw-print-instance-json foo/bar.mlir -o /dev/null 2>'foo/bar-instance.json'
 ```
