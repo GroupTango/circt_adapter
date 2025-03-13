@@ -17,10 +17,10 @@ describe("Explore a basic graph", () => {
   });
 
   it("Finds output node", () => {
-    searchByLabel("io_in");
+    searchByLabel("io_out");
     verifyInfoPanel({
       nodeInfo: {
-        "op name": "io_in",
+        "op name": "io_out",
         namespace: "PassthroughGenerator",
       },
     });
