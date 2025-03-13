@@ -57,7 +57,18 @@ describe("Check membership of all graph nodes", () => {
                     }
                   }
                 }
-  
+
+                if (currentNode.hasOwnProperty("attrs") && currentNode.attrs.length > 0) {
+                  let toVerify = {};
+                  currentNode.attrs.forEach((attr) => {
+                    toVerify[attr.key] = attr.value;
+                  })
+                  verifyInfoPanel({
+                    attrs: toVerify
+                  });
+                }
+
+                /*
                 if (currentNode.hasOwnProperty("attrs")) {
                   let attrs = currentNode.attrs;
                   const attrCount = attrs.length;
@@ -75,6 +86,7 @@ describe("Check membership of all graph nodes", () => {
                     }
                   }
                 }
+                */
               })
             }
           }
